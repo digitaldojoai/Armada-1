@@ -4,7 +4,7 @@ const CallToActionSection = () => {
   return (
     <>
         {/* Onovo CTA */}
-        <section className="onovo-section gap-top-140 gap-bottom-140" style={{"backgroundImage": "url("+Data.bg_image+")", "backgroundPosition": "center center", "backgroundRepeat": "no-repeat", "backgroundSize": "cover"}}>
+        <section className="onovo-section gap-top-140 gap-bottom-140" style={{"backgroundImage": "url(/images/skyscrapers.jpg)", "backgroundPosition": "center center", "backgroundRepeat": "no-repeat", "backgroundSize": "cover"}}>
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">

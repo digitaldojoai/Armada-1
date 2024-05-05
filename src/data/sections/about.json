@@ -12,7 +12,7 @@
         },
         {
             "title": "",
-            "text": "Pat Mulvey</br> Joe Pastore </br>Eric Colon</br> Mathew August",
+            "text": "<b>Pat Mulvey</br> Joe Pastore </br>Eric Colon</br> Mathew August</b>",
             "button": {
                 "label": "More About Us",
                 "link": "/about"

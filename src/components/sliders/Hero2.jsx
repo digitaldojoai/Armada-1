@@ -8,15 +8,15 @@ const Hero2Slider = () => {
   return (
     <>
         {/* Onovo Hero */}
-        <section className="onovo-section onovo-hero hero--two">
+        <section className="onovo-section onovo-hero hero--two bg-for-hero-home">
 
             {/* Hero swiper */}
             
-                <div className="swiper-wrapper">
-                    <div  className="swiper-slide bg-for-hero-home">
+                <div className="swiper-wrapper ">
+                    <div  className="swiper-slide ">
                         <div className="onovo-hero-slide-item">
                            
-                            <div className="image"  data-dimg={'/images/Hero-P.jpg'} data-mimg={Data.items[0].image.mobile}>
+                            <div className="image"  data-dimg={Data.items[0].image.desktop} data-mimg={Data.items[0].image.mobile}>
                                 <div className="ovrl" style={{"opacity": "0.95"}} />
                             </div>
                           

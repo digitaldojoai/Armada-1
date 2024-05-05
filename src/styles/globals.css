@@ -15,7 +15,6 @@ img.mfp-img {
 
 
 .bg-for-hero-home{
-    background-image: url('/images/Hero-P.jpg');
-    background-position: center top;
-
+    background-image: url('/images/Landing.png');
+    background-size: cover;
 }

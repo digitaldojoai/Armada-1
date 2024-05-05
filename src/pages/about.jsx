@@ -148,22 +148,12 @@ const About = (props) => {
             <div
               className="image"
               onClick={(e) => clickedVideoButton(e)}
-              style={{ backgroundImage: "url(/images/hero-digital-1.jpg)" }}
+              style={{ backgroundImage: "url(/images/collab.jpg)" }}
             />
-            <iframe
-              className="js-video-iframe"
-              data-src="https://www.youtube.com/embed/Gu6z6kIukgg?showinfo=0&rel=0&autoplay=1"
-            ></iframe>
-            <div
-              className="play onovo-circle-text"
-              onClick={(e) => clickedVideoButton(e)}
-            >
-              <div className="arrow" />
-              <div className="label onovo-text-black onovo-circle-text-label">
-                {" "}
-                Play Video - Play Video - Play Video -{" "}
-              </div>
-            </div>
+          
+           
+            
+         
           </div>
 
           {/* Description */}
@@ -195,12 +185,12 @@ const About = (props) => {
           <div className="row gap-top-100">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <a href="/images/posts1.jpg" className="mfp-image">
-                <img src="/images/posts1-1024x683.jpg" alt="" />
+                <img src="/images/work.jpg" alt="" />
               </a>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gap-top-60">
               <a href="/images/posts2.jpg" className="mfp-image">
-                <img src="/images/posts2-1024x683.jpg" alt="" />
+                <img src="/images/company.jpg" alt="" />
               </a>
             </div>
           </div>

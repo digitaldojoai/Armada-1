@@ -21,7 +21,7 @@ const ProjectsSection = dynamic( () => import("@components/sections/Projects"), 
 
 const Home2 = (props) => {
   return (
-    <Layouts header={2} footer={1}>
+    <Layouts header={2} footer={3}>
       <>
         <Hero2Slider />
        

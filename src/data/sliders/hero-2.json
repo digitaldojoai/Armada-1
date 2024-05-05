@@ -2,11 +2,11 @@
     "items": [
         {
             "image": {
-                "desktop": "/images/Hero-P.jpg",
-                "mobile": "/images/Hero-P.jpg"
+                "desktop": "/public/images/Landing.png",
+                "mobile": "/images/Landing.png"
             },
-            "title": "Solid Design and <br />Development Expertise",
-            "text": "We build readymade websites, mobile apps <br>and elaborate online business services.",
+            "title": "We offer a unique breadth <br />of investment solutions  <br />for High-Net-Worth<br /> Individuals and Institutions.",
+            "text": "At Armada, we strive for excellence </br>and differentiate ourselves with proprietary strategies backed by continuous research and development. </br>Founded on the principle of independent thought and entrepreneurship",
             "button": {
                 "label": "Learn More",
                 "link": "/about"

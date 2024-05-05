@@ -20,7 +20,7 @@ const DefaultFooter = () => {
                 {/* Description */}
                 <div className="onovo-text onovo-text-white">
                   <img
-                    src="/images/Hero.png"
+                    src="/images/ArmadaLogo.png"
                     alt="logo"
                     style={{ width: "100px" }}
                   />
