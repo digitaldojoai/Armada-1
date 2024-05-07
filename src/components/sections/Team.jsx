@@ -19,11 +19,11 @@ const TeamSection = ( { team } ) => {
 					</div>
 
 					{/* Team items */}
-					<div className="row gap-row">
+					<div className=" row gap-3 align-items-center align-self-center d-flex  justify-content-between">
 
                         {team.slice(0, Data.numOfItems).map((item, key) => (
-						<div key={`team-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
-							<div className="onovo-team" data-onovo-overlay data-onovo-scroll>
+						<div key={`team-item-${key}`} className=" d-flex align-items-center gap-5 col-xs-12 col-sm-12 col-md-6 col-lg-3">
+							<div className="onovo-team w-100" data-onovo-overlay data-onovo-scroll>
 								<div className="onovo-team-item onovo-hover-3">
 									<div className="desc">
 										<h5 className="title">
@@ -35,7 +35,7 @@ const TeamSection = ( { team } ) => {
 											<span data-splitting data-onovo-scroll>{item.role}</span>
 										</div>
 										<div className="onovo-social-1">
-											<ul>
+											{/* <ul>
                                                 {item.social.map((link, link_key) => (
 												<li key={`team-item-${key}-social-link-${link_key}`}>
 													<a className="onovo-social-link onovo-hover-2" href={link.link} title={link.title} target="_blank">
@@ -43,12 +43,12 @@ const TeamSection = ( { team } ) => {
 													</a>
 												</li>
 												))}
-											</ul>
+											</ul> */}
 										</div>
 									</div>
-									<div className="image">
+									<div className="image ">
 										<Link href={`/team/${item.id}`}>
-											<img decoding="async" src={item.image} width="350" height="530" alt={item.name} />
+											<img decoding="async"  src={item.image} width="350" height="730" alt={item.name} />
 										</Link>
 									</div>
 									<div className="num onovo-text-white">

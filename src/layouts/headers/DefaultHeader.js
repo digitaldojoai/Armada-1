@@ -17,7 +17,6 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
   });
   
   const [desktopMenu, desktopMenuToggle] = useState(false);
-
   const clickedDesktopMenu = (e) => {
     e.preventDefault();
     desktopMenuToggle(!desktopMenu);

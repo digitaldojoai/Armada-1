@@ -1,6 +1,6 @@
 ---
 #preview details
-image: "/images/post6.jpg"
+image: "/images/advisory.jpg"
 icon: "/images/serv-icon6.png"
 title: "Advisory"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."

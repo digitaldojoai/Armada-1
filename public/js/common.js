@@ -134,10 +134,10 @@
 	/*
 		Footer Sticky
 	*/
-	if($('.footer--fixed').length) {
-		var footer_fixed = $('.footer--fixed .onovo-footer').height();
-		$('.wrapper').css({'margin-bottom':footer_fixed+'px'});
-	}
+	// if($('.footer--fixed').length) {
+	// 	var footer_fixed = $('.footer--fixed .onovo-footer').height();
+	// 	$('.wrapper').css({'margin-bottom':footer_fixed+'px'});
+	// }
 
 	/*
 		Intro Style

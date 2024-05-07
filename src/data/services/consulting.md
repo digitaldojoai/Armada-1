@@ -1,6 +1,6 @@
 ---
 #preview details
-image: "/images/posts2.jpg"
+image: "/images/Consultancy.jpg"
 icon: "/images/serv-icon5.png"
 title: "Consulting"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."

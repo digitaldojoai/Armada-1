@@ -1,7 +1,7 @@
 ---
 #preview
 title: Interactive Brokers
-image: /images/project-n01-3-1200x900.jpg
+image: /images/Brokers.png
 category: Trading Partners
 category_slug: trading-partners
 # type: Art Direction, Branding, Interactive Design

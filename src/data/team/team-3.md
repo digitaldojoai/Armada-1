@@ -1,9 +1,9 @@
 ---
 #preview details
-image: /images/team-1-t-min.png
-name: Steven Morrison
-role: Full-stack Developer
-first_letter: S
+image: /images/Akram.jpeg
+name: Akram Khalaf
+role: '??'
+first_letter: A
 social:
   - link: https://facebook.com/
     icon: fab fa-facebook-f
@@ -15,17 +15,9 @@ social:
 
 #full details
 info:
-  - label: Age
-    value: 29 Years
-  
-  - label: Location
-    value: Baird House, 15-17 St Cross St London EC1N 8UW
-  
-  - label: Email
-    value: steven.morrison@domain.com
+  - label: About
+    value: Mr. Khalaf graduated from Azusa Pacific University with a B.B.A. in Finance with a concentration in quantitative finance and is fluent in Arabic and French. He previously traded over $3b in index options and other financial derivatives at an LA-based RIA. He also helped to launch the first two and twenty mutual funds in the United States.
 
-  - label: Phone No
-    value: +44 (0) 20 7430 2973
 
 services: 
   - service-1

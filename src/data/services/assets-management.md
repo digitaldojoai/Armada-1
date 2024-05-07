@@ -1,6 +1,6 @@
 ---
 #preview details
-image: "/images/posts3.jpg"
+image: "/images/asset.jpeg"
 icon: "/images/serv-icon1.png"
 title: "Assets Management"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
@@ -12,18 +12,18 @@ accordion:
   items:
     - heading: Index Volatility Strategy ("IVS")
       content: A proprietary algorithm generating alpha by predicting micro countertrends in short-term overbought and oversold levels within indexes. IVS systematically utilizes historical trading patterns and high delta index option contracts to settle trades daily in cash.
-      image: /images/Hero.png
+      image: /images/IVS.png
 
 
     - heading: Equity L/S (Long-Short Equity)
       content: Implements a systematic approach to identify opportunistic trades in global equity markets. Utilizing proprietary systems and data-driven insights, it tactically reweights portfolios based on macroeconomic factors weekly, with thorough reevaluation monthly.
-      image: /images/Hero.png
+      image: /images/Equity.png
 
 
 
     - heading: Fixed Income
       content:  Delivers risk-mitigated yields through a diversified portfolio including treasuries, high-yield bonds, and bond funds. It dynamically seeks opportunities based on prevailing interest rates and macroeconomic factors, aiming for stability and consistent income.
-      image: /images/Hero.png
+      image: /images/Fixed.png
 
 additional:
   enabled: 1

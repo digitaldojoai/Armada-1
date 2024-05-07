@@ -1,7 +1,7 @@
 ---
 #preview
 title: Headphones 3D Rendering
-image: /images/project-2-1200x988.jpg
+image: /images/Robin.jpeg
 category: Non-Profits
 category_slug: non-profits
 type: UI/UX Design, Branding, Logo Design

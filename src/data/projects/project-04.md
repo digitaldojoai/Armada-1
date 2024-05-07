@@ -1,7 +1,7 @@
 ---
 #preview
 title: Watts Empowerment Center
-image: /images/project-4.jpg
+image: /images/Watts.png
 category: Non-Profits
 category_slug: non-profits
 type: Marketing, Rendering, 3D Design

@@ -24,20 +24,10 @@ const Team = ( props ) => {
 						<div className="onovo-team-two">
 							<div className="onovo-team-two-item">
 								<div className="image onovo-hover-3 onovo-hover-black-30" data-onovo-overlay data-onovo-scroll>
-									<Link href={`/team/${item.id}`}>
+									<Link href={`/team/${item.id}`} >
 										<img src={item.image} alt={item.name} />
 									</Link>
-									<div className="onovo-social-2">
-										<ul>
-											{item.social.map((link, link_key) => (
-											<li key={`team-item-${key}-link-${link_key}`}>
-												<a key={`teamsocial-item-${link_key}`} className="onovo-social-link onovo-hover-2" href={link.link} title={link.title} target="_blank">
-													<i aria-hidden="true" className={link.icon} />
-												</a>
-											</li>
-											))}
-										</ul>
-									</div>
+									
 								</div>
 								<div className="desc">
 									<h5 className="title">

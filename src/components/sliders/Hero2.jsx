@@ -8,7 +8,7 @@ const Hero2Slider = () => {
   return (
     <>
         {/* Onovo Hero */}
-        <section className="onovo-section onovo-hero hero--two bg-for-hero-home">
+        <section className="onovo-section onovo-hero hero--two bg-for-hero-home overflow-hidden">
 
             {/* Hero swiper */}
             

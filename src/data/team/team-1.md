@@ -1,9 +1,9 @@
 ---
 #preview details
-image: /images/team-2-t-min.png
-name: Thomas Jackki
-role: UI & UX Designer
-first_letter: T
+image: /images/Zak.jpg
+name: Zachary Kastenhuber
+role: Co-founder & CEO
+first_letter: Z
 social:
   - link: https://facebook.com/
     icon: fab fa-facebook-f
@@ -15,17 +15,9 @@ social:
 
 #full details
 info:
-  - label: Age
-    value: 27 Years
-  
-  - label: Location
-    value: Baird House, 15-17 St Cross St London EC1N 8UW
-  
-  - label: Email
-    value: thomesjackki@domain.com
+  - label: About
+    value: Zachary Kastenhuber graduated from Harvard University with a Bachelor of Arts in Economics and Sociology. While attending Harvard University, he took several classes at the London School of Economics, Massachusetts Institute of Technology, Harvard Kennedy School, and Harvard Business School. Previously, Mr. Kastenhuber worked for Bank of America Merrill Lynch as a financial analyst with a focus on Investment Banking, Private Wealth Management, and other Private Banking Services. He is the co-founder and CEO of Armada Funds, He currently holds his Series 65, consults for several startups and late-stage businesses, advises on professional sports team transactions and assists with a diverse range of fundraising efforts in Finance, Real Estate, Energy, Industrials, and Technology.
 
-  - label: Phone No
-    value: +44 (0) 20 7430 2973
 
 services: 
   - service-1

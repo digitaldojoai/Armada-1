@@ -3187,7 +3187,9 @@ ul.onovo-footer-menu li {
 	background-position: center center;
 	background-size: contain;
 }
-
+.titles{
+	margin-top: 5%;
+}
 .onovo-hero .subtitle {
 	margin: 40px 0 40px 710px;
 	max-width: 560px;
@@ -3396,7 +3398,7 @@ ul.onovo-footer-menu li {
 }
 
 .onovo-hero.hero--two .title {
-	font-size: 60px;
+	font-size: 50px;
 	font-weight: 600;
 }
 
@@ -3778,6 +3780,7 @@ ul.onovo-footer-menu li {
 @media (max-width: 1024px) {
 	.onovo-hero .subtitle {
 		margin-left: 0;
+		
 	}
 	.js-hero-carousel-navs {
 		left: 10px;
@@ -3822,12 +3825,19 @@ ul.onovo-footer-menu li {
 	.onovo-hero .container {
 		padding-top: 30px;
 		padding-bottom: 30px;
+		
 	}
 	.onovo-hero.hero--two .title {
-		font-size: 40px;
+		font-size: 20px;
+	}
+	.titles{
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+		margin-left: 5%;
 	}
 	.onovo-hero.hero--two .subtitle {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	.onovo-hero-carousel {
 		padding-top: 160px;

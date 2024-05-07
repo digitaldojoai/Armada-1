@@ -1,7 +1,7 @@
 ---
 #preview
 title: Natixis
-image: /images/project-2-2-1200x982.jpg
+image: /images/NATIXIS.jpeg
 category: Trading Partners
 category_slug: trading-partners
 type: UI/UX Design, Mobile Apps, Interactive Design

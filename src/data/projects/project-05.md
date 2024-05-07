@@ -1,7 +1,7 @@
 ---
 #preview
 title: Women in Animation (“WIA”)
-image: /images/project-4.jpg
+image: /images/Women.png
 category: Non-Profits
 category_slug: non-profits
 type: Marketing, Rendering, 3D Design

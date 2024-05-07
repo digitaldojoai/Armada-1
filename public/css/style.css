@@ -3333,7 +3333,7 @@ ul.onovo-footer-menu li {
 }
 
 .onovo-hero.hero--two .title {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 600;
 }
 
@@ -3728,10 +3728,10 @@ ul.onovo-footer-menu li {
     padding-bottom: 30px;
   }
   .onovo-hero.hero--two .title {
-    font-size: 40px;
+    font-size: 10px !important;
   }
   .onovo-hero.hero--two .subtitle {
-    font-size: 18px;
+    font-size: 12px;
   }
   .onovo-hero-carousel {
     padding-top: 160px;

@@ -17,6 +17,7 @@ const Header2 = ({ darkHeader, cartButton }) => {
 	});
 
 	const [desktopMenu, desktopMenuToggle] = useState(false);
+	console.log('desktop menu is:  ', desktopMenu)
 
 	const clickedDesktopMenu = (e) => {
 		e.preventDefault();
@@ -109,7 +110,7 @@ const Header2 = ({ darkHeader, cartButton }) => {
 							</div>
 
 							{/* Menu Hamburger */}
-							<a href="#" className="onovo-menu-btn" style={{"display": "none"}}><span></span></a>
+							<a href="#" className={desktopMenu ? "onovo-menu-btn btn--active" : "onovo-menu-btn"} onClick={ (e) => clickedDesktopMenu(e) }><span /></a>
 							<div className="onovo-menu-popup align-left">
 								<div className="onovo-menu-overlay"></div>
 								<div className="onovo-menu-overlay-after"></div>

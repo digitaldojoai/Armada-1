@@ -1,9 +1,9 @@
 ---
 #preview details
-image: /images/team-6-t-min.png
-name: Melanie Robinson
-role: Seo & Marketing
-first_letter: M
+image: /images/Fady.jpg
+name: Fady Garabet
+role: CTO
+first_letter: F
 social:
   - link: https://facebook.com/
     icon: fab fa-facebook-f
@@ -15,17 +15,9 @@ social:
 
 #full details
 info:
-  - label: Age
-    value: 25 Years
+  - label: About
+    value: Held various management and executive positions across several industries, including Software Development, Manufacturing and Supply Chain. Over twenty 20 years of leadership and key role in founding and managing several successful companies. Team builder of technology and business consultant and product development with specialty in agile business implementations, optimizing resources, maintaining strict and transparent budgets. Proven networking skills, building partnership and delivering on time and on budget.Extensive experience in Information Technology, Analytics, Marketing, Negotiations and Finance. Spearheaded successful launch of several B2B software application for private and public sectors.
   
-  - label: Location
-    value: Baird House, 15-17 St Cross St London EC1N 8UW
-  
-  - label: Email
-    value: melanie.robinson@domain.com
-
-  - label: Phone No
-    value: +44 (0) 20 7430 2973
 
 services: 
   - service-1
