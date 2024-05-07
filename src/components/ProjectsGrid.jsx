@@ -95,7 +95,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             {!sideFilter &&
                             <div className="onovo-filter-nav-active" />
                             }
-                            <ul>
+                            <ul className="filter-container-main">
                                 <li key={`categories-item-first`}>
                                     <button onClick={handleFilterKeyChange("*")} className="onovo-filter-item item--active" type="button" data-filter="*">
                                         <span>All Partnerships</span>

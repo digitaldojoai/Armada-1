@@ -1,6 +1,6 @@
 ---
 #preview details
-image: /images/Fady.jpg
+image: /images/Fady.png
 name: Fady Garabet
 role: CTO
 first_letter: F
