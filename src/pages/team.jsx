@@ -60,7 +60,6 @@ const Team = ( props ) => {
 
 		<CallToActionSection />
 
-		<PartnersSection paddingTop />
 
     </Layouts>
   );

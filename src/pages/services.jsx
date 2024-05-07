@@ -18,11 +18,7 @@ const Services = (props) => {
     <Layouts>
       <PageBanner pageTitle={"Our Services"} pageDesc={"Our values and vaulted us to the top of our industry."} />
 
-      <Services2Section introHidden noPaddingBottom />
-
-      <CountersSection />
-
-      <VideoSection />
+   
 
       {/* Onovo Services */}
 	  <section className="onovo-section gap-top-140 gap-bottom-140">
@@ -72,7 +68,7 @@ const Services = (props) => {
       
       <CallToActionSection />
 
-      <PartnersSection paddingTop />
+     
       
     </Layouts>
   );

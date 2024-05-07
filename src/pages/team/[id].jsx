@@ -44,28 +44,12 @@ const TeamDetail = ( { postData, projects, services } ) => {
 								</ul>
 							</div>
 							}
-							{typeof postData.social != "undefined" &&
-							<div className="onovo-social-1 mb-5">
-								<ul>
-									{postData.social.map((item, key) => (
-									<li key={`teamsocial-item-${key}`}>
-										<a className="onovo-social-link onovo-hover-2" href={item.link} title={item.title} target="_blank">
-											<i aria-hidden="true" className={item.icon} />
-										</a>
-									</li>
-									))}
-								</ul>
-							</div>
-							}
+							
 						</div>
 					</div>
 				</div>
 		
-				{postData.contentHtml != "" &&
-				<div className="onovo-text gap-top-140">
-					<div dangerouslySetInnerHTML={{__html : postData.contentHtml}} />
-				</div>
-				}
+			
 
 
 			</div>

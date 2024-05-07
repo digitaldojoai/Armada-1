@@ -2,7 +2,7 @@
 #preview details
 image: /images/Akram.jpeg
 name: Akram Khalaf
-role: '??'
+role: ''
 first_letter: A
 social:
   - link: https://facebook.com/
