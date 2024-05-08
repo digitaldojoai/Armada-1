@@ -121,18 +121,9 @@
         "copy": "© 2023 ONOVO by <a href='https://bslthemes.com' target='blank' class='onovo-lnk lnk--white'>bslthemes Team</a>. All rights reserved."
     },
     "social": [
+        
         {
-            "link": "https://facebook.com",
-            "icon": "fab fa-facebook",
-            "title": "Facebook"
-        },
-        {
-            "link": "https://twitter.com",
-            "icon": "fab fa-twitter",
-            "title": "Twitter"
-        },
-        {
-            "link": "https://linkedin.com",
+            "link": "https://www.linkedin.com/company/armada-funds/",
             "icon": "fab fa-linkedin",
             "title": "Linkedin"
         }

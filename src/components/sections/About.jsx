@@ -40,17 +40,12 @@ const AboutSection = () => {
                 </div>
 
                 {/* Description */}
-                <div className="row">
+                <div className="d-flex basic-info-about">
                   {Data.items.map((item, key) => (
                   <div key={`about-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <h5 className="text-uppercase">{item.title}</h5>
                     <p dangerouslySetInnerHTML={{__html: item.text}} />
-                    {item.button != undefined &&
-                    <Link className="onovo-btn onovo-hover-btn" href={item.button.link}>
-                      <i className="arrow"><span /></i>
-                      <span>{item.button.label}</span>
-                    </Link>
-                    }
+                
                   </div>
                   ))}
                 </div>

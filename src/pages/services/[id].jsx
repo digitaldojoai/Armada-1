@@ -68,6 +68,17 @@ const ServiceDetail = ( { postData, services } ) => {
 							<Accordion.Body>
 							<div className="onovo-text">
 								<div dangerouslySetInnerHTML={{__html : item.content}} />
+								
+								{item.bullets?
+								
+								item.bullets.map(bullet => (
+									<ul className="m-3">
+									<li >{bullet}</li>
+								</ul>
+								)
+							)
+								
+							:null}
 								{item.image?
 							<Card eventKey="0">
 								

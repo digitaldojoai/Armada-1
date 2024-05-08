@@ -119,7 +119,7 @@ const About = (props) => {
                   />
                 </div>
                 <div className="num-after onovo-text-white"> + </div>
-                <div className="label"> Completed projects </div>
+                <div className="label"> Clients </div>
               </div>
             </div>
 
@@ -138,7 +138,7 @@ const About = (props) => {
                   />
                 </div>
                 <div className="num-after onovo-text-white"> M </div>
-                <div className="label"> Lines of code </div>
+                <div className="label"> Investment Returns </div>
               </div>
             </div>
           </div>

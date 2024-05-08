@@ -1,6 +1,6 @@
 {
     "title": "A Design Agency <br/>Delivering Success by <br/>Winning Hearts",
-    "subtitle": "Welcome to Onovo",
+    "subtitle": "",
     "number": {
         "value": "14",
         "label": "Years of Digital Solutions Experience"
@@ -12,7 +12,7 @@
         },
         {
             "title": "",
-            "text": "<b>Pat Mulvey</br> Joe Pastore </br>Eric Colon</br> Mathew August</b>",
+            "text": "<h4><b>Pat Mulvey</br> Joe Pastore </br>Eric Colon</br> Mathew August</b><h4>",
             "button": {
                 "label": "More About Us",
                 "link": "/about"

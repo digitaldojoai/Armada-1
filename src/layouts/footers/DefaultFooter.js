@@ -22,7 +22,7 @@ const DefaultFooter = () => {
                   <img
                     src="/images/ArmadaLogo.png"
                     alt="logo"
-                    style={{ width: "100px" }}
+                    style={{ width: "130px" }}
                   />
                 </div>
               </div>
@@ -61,20 +61,21 @@ const DefaultFooter = () => {
                     }}
                   >
                     <i className="fas fa-phone"></i>
-                    <a
+                    <p><a
                       href="tel:+61(0)383766284"
                       className="onovo-lnk lnk--white"
                       target="_blank"
                     >
                       +61 (0) 3 8376 6284
-                    </a>
+                    </a></p>
                   </div>
                   <br />
 
                 </div>
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 d-flex gap-0 py-5  ">
-                <div className="row onovo-text-white">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 d-flex ">
+                <div className=" onovo-text onovo-text-white ">
+                  <h5 className=""></h5>
                   <div
                     style={{
                       display: "flex",
@@ -85,13 +86,13 @@ const DefaultFooter = () => {
                     }}
                   >
                     <i className="fas fa-envelope text-white"></i>
-                    <a
+                    <p>  <a
                       href="mailto:info@armada-funds.com"
                       className="onovo-lnk text-white"
                       target="_blank"
                     >
                       info@armada-funds.com
-                    </a>
+                    </a></p>
                   </div>
                   <div
                     style={{
@@ -101,35 +102,27 @@ const DefaultFooter = () => {
                       opacity: "0.6",
 
                     }}
+                    className=""
                   >
                     <i className="fab fa-linkedin text-white"></i>
-                    <a
-                      href="https://www.linkedin.com/in/your-linkedin-profile"
+                    <p>   <a
+                      href="https://www.linkedin.com/company/armada-funds/"
                       className="onovo-lnk  text-white"
                       target="_blank"
                     >
                       LinkedIn
-                    </a>
+                    </a></p>
                   </div>
+                  
                 </div>
               </div>
             </div>
 
             <div className="separator"></div>
 
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-self-center">
-                {/* Copyright */}
-                <div className="copyright onovo-text-white">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: appData.footer.copy }}
-                  />
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-right">
+            
               
-              </div>
-            </div>
+           
           </div>
         </div>
       </footer>

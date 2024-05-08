@@ -37,7 +37,7 @@ Version: 1.0
 
 html,
 body {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	overflow: visible;
 	height: auto !important;
@@ -129,10 +129,9 @@ b, strong {
 		width: 90%;
 		height: 300px;
 	}
-	
 }
-/* Container */
 
+/* Container */
 .container {
 	max-width: 1318px;
 }

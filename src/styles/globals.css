@@ -17,4 +17,20 @@ img.mfp-img {
 .bg-for-hero-home{
     background-image: url('/images/Landing.png');
     background-size: cover;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .basic-info-about{
+        gap: 100px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .basic-info-about{
+        flex-direction: column;
+    }
+    
 }
