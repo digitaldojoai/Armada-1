@@ -32,7 +32,7 @@ const CallToActionSection = () => {
                              
                                     {Data.social.map((item, key) => (
                                   
-                                        <a className="onovo-btn mt-3 btn--white btn--large btn--icon onovo-hover-btn" href={item.link} target="_blank">
+                                        <a key={key} className="onovo-btn mt-3 btn--white btn--large btn--icon onovo-hover-btn" href='/contact'>
                                             <i aria-hidden="true" className={item.icon} />
                                             <span>{item.title}</span>
                                         </a>

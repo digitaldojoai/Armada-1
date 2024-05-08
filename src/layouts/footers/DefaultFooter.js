@@ -39,7 +39,7 @@ const DefaultFooter = () => {
                     }}
                   >
                     <i className="fas fa-map-marker-alt"></i>
-                    <p>777 w Putnam ave Greenwich USA</p>
+                    <p>777 West Putnam Avenue, Greenwich, CT 06830, United States</p>
                   </div>
                   <div
                     style={{
@@ -50,7 +50,7 @@ const DefaultFooter = () => {
                     }}
                   >
                     <i className="fas fa-map-marker-alt"></i>
-                    <p>Los Angeles California </p>
+                    <p>Los Angeles, California </p>
                   </div>
                   <div
                     style={{

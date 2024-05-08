@@ -242,7 +242,7 @@ const Contact = () => {
                   <li>
                     <h5>New York</h5>
                     <div>
-                      777 W Putnam Ave Greenwich, <br />
+                      777 West Putnam Avenue, Greenwich, <br />
                       CT 06830 United States
                     </div>
                   </li>

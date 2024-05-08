@@ -10,62 +10,55 @@ const AboutSection = () => {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
-                <div className="row">
-                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-12">
+                <div className="row ">
+               
 
                     {/* Heading */}
                     <div className="onovo-heading gap-bottom-40">
-                      <div className="onovo-subtitle-1">
-                        <span>{Data.subtitle}</span>
-                      </div>
+                    
                       <h2 className="onovo-title-2">
-                        <span dangerouslySetInnerHTML={{__html: Data.title}} />
+                        <span dangerouslySetInnerHTML={{__html: 'Our Advisors'}} />
                       </h2>
                     </div>
 
                   </div>
-                  <div className="col-xs-12 col-sm-12 col-md-4 col-lg-12 hide-on-desktop gap-bottom-60">
+                  {/* <div className="col-xs-12 col-sm-12 col-md-4 col-lg-12 hide-on-desktop gap-bottom-60 justify-content-between"> */}
 
-                    {/* Number */}
-                    <div className="onovo-number onovo-circle-text mrg-left">
-                      <div className="num onovo-text-white">
-                        <span>{Data.number.value}</span>
-                      </div>
-                      <div className="label onovo-text-black onovo-circle-text-label">
-                        {Data.number.label}
-                      </div>
-                    </div>
+                    {/* Number
+                    <div className="onovo-number onovo-circle-text mrg-left ">
+                      <div className="num onovo-text-white"> */}
+                        {/* <span>{Data.number.value}</span> */}
+                      {/* </div>
+                      <div className="label onovo-text-black onovo-circle-text-label"> */}
+                        {/* {Data.number.label} */}
+                      {/* </div>
+                    </div> */}
 
-                  </div>
+                  {/* </div> */}
                 </div>
 
                 {/* Description */}
                 <div className="d-flex basic-info-about">
-                  {Data.items.map((item, key) => (
-                  <div key={`about-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <h5 className="text-uppercase">{item.title}</h5>
-                    <p dangerouslySetInnerHTML={{__html: item.text}} />
+                  
+                  <div  className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <p dangerouslySetInnerHTML={{__html: Data.items[0].text}} />
                 
                   </div>
-                  ))}
+                  <div  className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                   <h4>Pat Mulvey</h4>
+                  <h4> Joe Pastore </h4>
+                   <h4>Eric Colon</h4>
+                   <h4> Mathew August</h4>
+                  </div>
                 </div>
 
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 hide-on-mobile">
 
-                {/* Number */}
-                <div className="onovo-number onovo-circle-text mrg-right">
-                  <div className="num onovo-text-white">
-                    <span>{Data.number.value}</span>
-                  </div>
-                  <div className="label onovo-text-black onovo-circle-text-label">
-                    {Data.number.label}
-                  </div>
-                </div>
+                
 
               </div>
             </div>
-          </div>
         </section>
       </>
     );
