@@ -13,7 +13,7 @@ link: https://robinhood.org/
 details:
     items:
         - label: "Description "
-          value: "-Robin Hood is New York City’s largest poverty-fighting organization. We support low-income families by building and fueling the most impactful nonprofits across all five boroughs that are elevating people from poverty.
+          value: "Robin Hood is New York City’s largest poverty-fighting organization. We support low-income families by building and fueling the most impactful nonprofits across all five boroughs that are elevating people from poverty.
           -Over three decades, we’ve invested more than $3B in New York City to ensure low-income families are on pathways needed to realize economic mobility."
 
 
