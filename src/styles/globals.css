@@ -34,3 +34,19 @@ img.mfp-img {
     }
     
 }
+
+
+
+@media screen and (min-width: 1024px) {
+    .class-for-footer-items{
+        margin-top: 20px;
+    }
+}
+
+
+/* form gap on mobile */
+@media screen and (max-width: 768px) {
+    .formik-form-main{
+        margin-top: 50px;
+    }
+}

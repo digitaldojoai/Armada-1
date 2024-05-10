@@ -2,7 +2,7 @@
     "settings": {
         "siteName": "Onovo",
         "preloader": true,
-        "formspreeURL": "https://formspree.io/f/your_api_key",
+        "formspreeURL": "https://formspree.io/f/xbjnbjan",
         "portfolio": {
             "categories": [
                 {
@@ -39,7 +39,7 @@
             },
             {
                 "label": "Services",
-                "link": "/services/advisory",
+                "link": "#",
                 "children": [
                   
                     {
@@ -125,7 +125,7 @@
         {
             "link": "https://www.linkedin.com/company/armada-funds/",
             "icon": "fab fa-linkedin",
-            "title": "Linkedin"
+            "title": "Armada Funds"
         }
     ]
 }

@@ -17,7 +17,7 @@ const TeamDetail = ( { postData, projects, services } ) => {
 
 				{/* Team Card */}
 				<div className="onovo-team-detail">
-					<div className="row gap-140 gap-top-60 gap-bottom-0">
+					<div className="row gap-140 gap-top-60 gap-bottom-0 ">
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<img loading="lazy" src={postData.image}  className="team-detail-img " alt={postData.name} />
 						</div>

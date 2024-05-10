@@ -22,7 +22,7 @@ const DefaultFooter = () => {
                   <img
                     src="/images/ArmadaLogo.png"
                     alt="logo"
-                    style={{ width: "130px" }}
+                    style={{ width: "160px" }}
                   />
                 </div>
               </div>
@@ -74,7 +74,7 @@ const DefaultFooter = () => {
                 </div>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 d-flex ">
-                <div className=" onovo-text onovo-text-white ">
+                <div className=" onovo-text onovo-text-white class-for-footer-items">
                   <h5 className=""></h5>
                   <div
                     style={{
@@ -110,7 +110,7 @@ const DefaultFooter = () => {
                       className="onovo-lnk  text-white"
                       target="_blank"
                     >
-                      LinkedIn
+                      Armada Funds
                     </a></p>
                   </div>
                   

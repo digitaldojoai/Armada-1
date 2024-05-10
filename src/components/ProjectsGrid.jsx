@@ -97,13 +97,13 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             }
                             <ul className="filter-container-main">
                                 <li key={`categories-item-first`}>
-                                    <button onClick={handleFilterKeyChange("*")} className="onovo-filter-item item--active" type="button" data-filter="*">
+                                    <button onClick={handleFilterKeyChange("*")} className="onovo-filter-item item--active" type="" data-filter="*">
                                         <span>All Partnerships</span>
                                     </button>
                                 </li>
                                 {appData.settings.portfolio.categories.map((item, key) => (
                                 <li key={`categories-item-${key}`}>
-                                    <button onClick={handleFilterKeyChange(item.slug)} className="onovo-filter-item" type="button" data-filter={item.slug}>
+                                    <button onClick={handleFilterKeyChange(item.slug)} className="" type="button" data-filter={item.slug}>
                                         <span>{item.label}</span>
                                     </button>
                                 </li>
@@ -123,13 +123,11 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             {layout == "grid" &&    
                                 <div className="onovo-portfolio-item">
                                     <div className={masonry ? "image" : "image image-square"} data-onovo-overlay data-onovo-scroll>
-                                        <Link href={galleryMode ? item.image : `/projects/${item.id}`} className="onovo-hover-3">
                                             <img src={item.image} alt={item.title} />
-                                        </Link>
                                     </div>
                                     <div className="desc">
                                         <h5 className="title">
-                                            <Link className="onovo-lnk" href={galleryMode ? item.image : `/projects/${item.id}`}>
+                                            <Link className="onovo-lnk" href={galleryMode ? item.image : `#`}>
                                                 <span data-splitting data-onovo-scroll>{item.title}</span>
                                             </Link>
                                         </h5>
@@ -143,8 +141,8 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             }
                             {layout == "list" &&
                                 <div className="onovo-portfolio-item onovo-portfolio-item-list">
-                                    <div className="image"  data-onovo-scroll>
-                                          <img src={item.image} alt={item.title} />
+                                    <div className=""  >
+                                          <img src={item.image} alt={item.title} width={400} height={250}/>
                                        
                                     </div>
                                     <div className="desc">
@@ -154,7 +152,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                                         </div>
                                       </div>
                                       <h5 className="title">
-                                        <Link className="onovo-lnk" href={`/projects/${item.id}`}>
+                                        <Link className="onovo-lnk" href={``}>
                                           <span data-splitting data-onovo-scroll>{item.title}</span>
                                         </Link>
                                       </h5>

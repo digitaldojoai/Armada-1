@@ -80,9 +80,9 @@ const ServiceDetail = ( { postData, services } ) => {
 								
 							:null}
 								{item.image?
-							<Card eventKey="0">
+							<div eventKey="0">
 								
-						<Card.Img src={item.image} alt={item.heading} /></Card>:null
+						<Card.Img src={item.image} alt={item.heading} /></div>:null
 						}
 							</div>
 							</Accordion.Body>
@@ -107,7 +107,7 @@ const ServiceDetail = ( { postData, services } ) => {
 						
 
 						{/* Onovo Form */}
-						<div className="onovo-form-box onovo-text-white">
+						<div className="onovo-form-box formik-form-main onovo-text-white">
 							<h5>Send Us A Message</h5>
 							<p>Feel some love, to see what we can do...t!</p>
 							<Formik

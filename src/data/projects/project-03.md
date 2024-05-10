@@ -1,6 +1,6 @@
 ---
 #preview
-title: Headphones 3D Rendering
+title: Robinhood Foundation
 image: /images/Robin.jpeg
 category: Non-Profits
 category_slug: non-profits

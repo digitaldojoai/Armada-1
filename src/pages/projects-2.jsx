@@ -10,7 +10,7 @@ const ProjectsGrid = dynamic( () => import("@components/ProjectsGrid"), { ssr: f
 const Portfolio2 = (props) => {
   return (
     <Layouts>
-      <PageBanner pageTitle={"Our Projects"} pageDesc={"Creative studio at the intersection of art, designed technology."} />
+      <PageBanner pageTitle={"Partnerships"} pageDesc={"Creative studio at the intersection of art, designed technology."} />
 
       <ProjectsGrid projects={props.projects} layout={"list"} />
       

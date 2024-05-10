@@ -188,7 +188,7 @@ const About = (props) => {
                 <img src="/images/work.jpg" alt="" />
               </a>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gap-top-60">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
               <a href="/images/posts2.jpg" className="mfp-image">
                 <img src="/images/company.jpg" alt="" />
               </a>

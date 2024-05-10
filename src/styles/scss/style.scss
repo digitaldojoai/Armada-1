@@ -2888,13 +2888,14 @@ a.onovo-menu-btn,
 
 .onovo-menu ul li a {
 	position: relative;
+	font-weight: 200;
 	color: #aeaeae;
 	transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
 	-webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
 }
 
 .onovo-menu ul li a::before {
-	content: "0" counter(onovo-menu-counter) ".";
+	content: "";
 	position: absolute;
 	left: -80px;
 	top: 15px;
@@ -5018,6 +5019,7 @@ ul.onovo-footer-menu li {
 	}
 	.onovo-filter.filter--default ul li button.item--active {
 		background: #faca73;
+		
 	}
 	.onovo-portfolio-item-list {
 		display: block;
@@ -5049,7 +5051,12 @@ ul.onovo-footer-menu li {
 	.onovo-portfolio .onovo-loadmore {
 		margin: 15px 0 0 0;
 	}
+	.onovo-filter.filter--default ul li::before {
+		display: none;
+	}
 }
+
+
 
 
 /*---
@@ -5078,8 +5085,7 @@ ul.onovo-footer-menu li {
 
 .onovo-team-detail .team-detail-img {
 	position: relative;
-	margin-bottom: -70px;
-	z-index: 2;
+	margin:20px;
 	background-color: #eef0ef;
 }
 

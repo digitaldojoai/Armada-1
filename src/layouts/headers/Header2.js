@@ -75,7 +75,7 @@ const Header2 = ({ darkHeader, cartButton }) => {
 						<div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center">
 
 							{/* Logo */}
-							<div className="onovo-logo-image" style={{"maxWidth": "100px"}}>
+							<div className="onovo-logo-image" style={{"maxWidth": "130px"}}>
 								<Link href="/">
 									<img src={appData.header.logo.image} alt={appData.header.logo.alt} />
                     				<img className="logo--white" src={appData.header.logo.image_white} alt={appData.header.logo.alt} />
@@ -91,14 +91,13 @@ const Header2 = ({ darkHeader, cartButton }) => {
 									{navItems.map((item, key) => (
 									<li key={`header-nav-item-${key}`} className={item.classes}>
 										<Link href={item.link} >{item.label}</Link>
-										{/* <Link href={item.link} className={item.children ? "onovo-lnk lnk--active onovo-dropdown-toggle" : "onovo-lnk lnk--active"} onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""} >{item.label}</Link> */}
 										{item.children != 0 &&
 										<i className="icon fas fa-caret-down" />
 										}
 										{item.children != 0 &&
 										<ul className="sub-menu">
 										{item.children.map((subitem, key) => (
-										<li key={`header-nav-sub-item-${key}`}>
+										<li className={item.classes} key={`header-nav-sub-item-${key}`}>
 											<Link className="onovo-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
 										</li>
 										))}
@@ -119,19 +118,19 @@ const Header2 = ({ darkHeader, cartButton }) => {
 										<div className="onovo-menu">
 											<ul className="onovo-menu-nav">
 												{navItems.map((item, key) => (
-												<li key={`header-nav-item-${key}`} className={item.classes}>
+												<li key={`header-nav-item-${key}`}  className={`${item.classes} mb-4  `}>
 													<Link className={item.children ? "onovo-lnk lnk--active onovo-dropdown-toggle" : "onovo-lnk lnk--active"} onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""} href={item.link}>{item.label}</Link>
-													{item.children &&
-													<i className="icon fas fa-chevron-down" />
+													{item.children.length>0? 
+													<i className="icon fas fa-chevron-down" />:null
 													}
-													{item.children != 0 &&
+													{item.children?
 													<ul className="sub-menu">
 													{item.children.map((subitem, key) => (
-													<li key={`header-nav-sub-item-${key}`}>
-														<Link className="onovo-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
+													<li  key={`header-nav-sub-item-${key}`} className={`${item.classes} mt-2`}>
+														<Link className="onovo-lnk lnk--active" href={subitem.link} target={"_blank"} >{subitem.label}</Link>
 													</li>
 													))}
-													</ul>
+													</ul>:null
 													}
 												</li>
 												))}

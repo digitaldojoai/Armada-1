@@ -12,7 +12,7 @@ date: 2021-2023
 details:
     items:
         - label: "Description"
-          value:  1.3 TRILLION AUM WE BELIEVE IN THE POWER OF INDEPENDENT THINKING. EACH INVESTMENT MANAGER AT NATIXIS FOCUSES ON THOSE INVESTMENT STYLES AND DISCIPLINES WHERE THEY HAVE PROVEN EXPERTISE. THE END RESULT IS A SELECTION OF MORE THAN 200 INVESTMENT STRATEGIES FROM SOME OF THE WORLD’S MOST RESPECTED NAMES IN INVESTMENT MANAGEMENT. WE PARTNER WITH CLIENTS TO UNDERSTAND THEIR UNIQUE INVESTMENT OBJECTIVES. WE OFFER THEM A SINGLE POINT OF ACCESS TO A WIDE RANGE OF INVESTMENT STRATEGIES THAT ARE DIVERSIFIED BY ASSET CLASS, INVESTMENT STYLE AND APPROACH. WE COMPLEMENT THIS BY DESIGNING, DEVELOPING, AND EXECUTING MULTI-ASSET SOLUTIONS TO MEET THEIR SPECIFIC PORTFOLIO REQUIREMENTS AND ACHIEVE THEIR DESIRED OUTCOMES.
+          value:  1.3 trillion aum we believe in the power of independent thinking. Each investment manager at Natixis focuses on those investment styles and disciplines where they have proven expertise. The end result is a selection of more than 200 investment strategies from some of the world’s most respected names in investment management. We partner with clients to understand their unique investment objectives. We offer them a single point of access to a wide range of investment strategies that are diversified by asset class, investment style and approach. We complement this by designing, developing, and executing multi-asset solutions to meet their specific portfolio requirements and achieve their desired outcomes.
 
 
        
