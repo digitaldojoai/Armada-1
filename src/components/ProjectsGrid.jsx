@@ -141,8 +141,11 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             }
                             {layout == "list" &&
                                 <div className="onovo-portfolio-item onovo-portfolio-item-list">
-                                    <div className=""  >
+                                    <div className="image"  >
+                                    <Link className="" href={item.link} target="_blank">
+
                                           <img src={item.image} alt={item.title} width={400} height={250}/>
+                                          </Link>
                                        
                                     </div>
                                     <div className="desc">
@@ -152,7 +155,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                                         </div>
                                       </div>
                                       <h5 className="title">
-                                        <Link className="onovo-lnk" href={item.link}>
+                                        <Link className="onovo-lnk" href={item.link} target="_blank">
                                           <span data-splitting data-onovo-scroll>{item.title}</span>
                                         </Link>
                                       </h5>
