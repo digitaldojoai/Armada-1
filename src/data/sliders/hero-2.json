@@ -3,7 +3,7 @@
         {
             "image": {
                 "desktop": "/public/images/Landing.png",
-                "mobile": "/images/Landing.png"
+                "mobile": "public/images/landingMobile.png"
             },
             "title": "We strive for excellence </br>and differentiation!",
             "text": "Armada, founded on the principle of independent thought and entrepreneurship,  offers proprietary strategies backed by continuous research and development.",

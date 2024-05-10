@@ -27,10 +27,18 @@ img.mfp-img {
         gap: 100px;
     }
     
+    
 }
 @media screen and (max-width: 768px) {
     .basic-info-about{
         flex-direction: column;
+    }
+    .bg-for-hero-home{
+        background-image: url('/images/landingMobile.png') !important;
+        background-size: cover;
+        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     
 }

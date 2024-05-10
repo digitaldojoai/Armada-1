@@ -16,7 +16,7 @@ const Hero2Slider = () => {
                     <div  className="swiper-slide ">
                         <div className="onovo-hero-slide-item">
                            
-                            <div className="image"  data-dimg={Data.items[0].image.desktop} data-mimg={Data.items[0].image.mobile}>
+                            <div className="image slider-hero-2-main" >
                                 <div className="ovrl" style={{"opacity": "0.95"}} />
                             </div>
                           

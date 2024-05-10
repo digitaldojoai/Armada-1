@@ -2386,6 +2386,15 @@ button > span,
 .onovo-logo-image {
 	position: relative;
 	line-height: 1;
+	max-width: 60px;
+}
+
+@media (max-width: 767px) {
+	.onovo-logo-image{
+		max-width: 50px;
+		margin-top: 10px;
+	}
+	
 }
 
 .onovo-logo-image img {
@@ -3837,8 +3846,7 @@ ul.onovo-footer-menu li {
 		padding: 20px;
 		padding-right: 30px;
 		margin-left: 5%;
-		background-color: rgba(0, 0, 0, 0.272);
-		border-radius: 5px;
+		
 	}
 	
 	
