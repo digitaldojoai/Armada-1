@@ -18,8 +18,8 @@
     },
     "header": {
         "logo": {
-            "image": "/images/ArmadaLogo.png",
-            "image_white": "/images/ArmadaLogo.png",
+            "image": "/images/logo.png",
+            "image_white": "/images/logo.png",
             "alt": "logo"
         },
         "menu": [

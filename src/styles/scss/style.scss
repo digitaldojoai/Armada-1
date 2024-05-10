@@ -3834,8 +3834,14 @@ ul.onovo-footer-menu li {
 		display: flex;
 		flex-direction: column;
 		margin-top: 20px;
+		padding: 20px;
+		padding-right: 30px;
 		margin-left: 5%;
+		background-color: rgba(0, 0, 0, 0.272);
+		border-radius: 5px;
 	}
+	
+	
 	.onovo-hero.hero--two .subtitle {
 		font-size: 14px;
 	}
@@ -4516,11 +4522,11 @@ ul.onovo-footer-menu li {
 	.onovo-ticker-slider .title a {
 		font-size: 50px;
 	}
-	.filter-container-main{
-		display: flex;
-		flex-direction: column;
+	// .filter-container-main{
+	// 	display: flex;
+	// 	flex-direction: column;
 	
-	}
+	// }
 }
 
 
@@ -6579,7 +6585,7 @@ body .onovo-subscribe-form .submit-container {
 }
 
 .onovo-faq-item .onovo-collapse-btn {
-	padding: 28px 60px;
+	padding: 38px 60px;
 	position: relative;
 	overflow: hidden;
 	display: block;
@@ -6671,7 +6677,8 @@ body .onovo-subscribe-form .submit-container {
 
 @media (max-width: 767px) {
 	.onovo-faq-item .onovo-collapse-btn {
-		padding: 20px 90px 20px 30px;
+		padding: 35px 90px 20px 30px;
+		min-height: 100px !important;
 		font-size: 18px;
 	}
 	.onovo-faq-item .onovo-text {
