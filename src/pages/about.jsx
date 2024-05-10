@@ -150,10 +150,6 @@ const About = (props) => {
               onClick={(e) => clickedVideoButton(e)}
               style={{ backgroundImage: "url(/images/collab.jpg)" }}
             />
-          
-           
-            
-         
           </div>
 
           {/* Description */}
@@ -162,10 +158,11 @@ const About = (props) => {
               <h5 className="text-uppercase">Our Mission</h5>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-              From the moment our company was founded, we have helped our
-              clients find exceptional solutions for their businesses , creating
-              memorable brands and digital products. Our expertise grows with
-              each year, and our accumulated experience.
+              At Armada, we are dedicated to providing unique investment
+              solutions grounded in proprietary research and development.
+              Through our commitment to independent thought and
+              entrepreneurship, we aim to guide High-Net-Worth Individuals and
+              Institutions towards sustained growth and prosperity.
             </div>
           </div>
 
@@ -175,9 +172,10 @@ const About = (props) => {
               <h5 className="text-uppercase">Our Goal</h5>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-              Our goal is to deliver amazing experiences that make people talk,
-              and build strategic value for brands, tech, entertainment, arts
-              &amp; culture.
+              Our goal at Armada is to revolutionize the investment landscape by
+              continuously pushing the boundaries of innovation and providing
+              tailored solutions that empower our clients to thrive in
+              ever-changing markets.
             </div>
           </div>
 
@@ -200,7 +198,6 @@ const About = (props) => {
       <TeamSection team={props.team} />
       <AboutSection />
       <CallToActionSection />
-	  
     </Layouts>
   );
 };
