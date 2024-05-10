@@ -5,16 +5,10 @@
       "static/chunks/src_components_SplitScrollAnimation_jsx.js"
     ]
   },
-  "about.jsx -> @components/sliders/History": {
-    "id": "about.jsx -> @components/sliders/History",
+  "projects-2.jsx -> @components/ProjectsGrid": {
+    "id": "projects-2.jsx -> @components/ProjectsGrid",
     "files": [
-      "static/chunks/src_components_sliders_History_jsx.js"
-    ]
-  },
-  "about.jsx -> @components/sliders/Testimonial2": {
-    "id": "about.jsx -> @components/sliders/Testimonial2",
-    "files": [
-      "static/chunks/src_components_sliders_Testimonial2_jsx.js"
+      "static/chunks/src_components_ProjectsGrid_jsx.js"
     ]
   }
 }

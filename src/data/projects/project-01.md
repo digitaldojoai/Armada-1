@@ -1,9 +1,11 @@
 ---
 #preview
 title: Interactive Brokers
-image: /images/Brokers.png
+image: /images/3.png
 category: Trading Partners
 category_slug: trading-partners
+link: https://www.interactivebrokers.com/en/index.php?f=1338&gclid=Cj0KCQjw6PGxBhCVARIsAIumnWb-72eACJhlzT410BsgGlqGwAySHdtHf0lm1yy_BlqGgvo7DonJVY4aArj9EALw_wcB
+
 # type: Art Direction, Branding, Interactive Design
 # team: Thomas Jackki
 # date: 2021-2023

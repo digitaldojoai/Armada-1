@@ -1,13 +1,13 @@
 ---
 #preview
 title: Women in Animation (“WIA”)
-image: /images/Women.png
+image: /images/1.png
 category: Non-Profits
 category_slug: non-profits
 type: Marketing, Rendering, 3D Design
 team: Lina Watson
 date: 2021-2023
-
+link: https://womeninanimation.org/ 
 #full details
 details:
     items:

@@ -1,13 +1,13 @@
 ---
 #preview
 title: Watts Empowerment Center
-image: /images/Watts.png
+image: /images/5.png
 category: Non-Profits
 category_slug: non-profits
 type: Marketing, Rendering, 3D Design
 team: Lina Watson
 date: 2021-2023
-
+link: https://www.youthmentor.org/givehope
 #full details
 details:
     items:

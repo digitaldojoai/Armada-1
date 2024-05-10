@@ -1,12 +1,13 @@
 ---
 #preview
 title: Robinhood Foundation
-image: /images/Robin.jpeg
+image: /images/2.png
 category: Non-Profits
 category_slug: non-profits
 type: UI/UX Design, Branding, Logo Design
 team: Steven Morrison
 date: 2021-2023
+link: https://robinhood.org/
 
 #full details
 details:

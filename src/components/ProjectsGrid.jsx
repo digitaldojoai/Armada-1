@@ -152,7 +152,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                                         </div>
                                       </div>
                                       <h5 className="title">
-                                        <Link className="onovo-lnk" href={``}>
+                                        <Link className="onovo-lnk" href={item.link}>
                                           <span data-splitting data-onovo-scroll>{item.title}</span>
                                         </Link>
                                       </h5>

@@ -1,13 +1,13 @@
 ---
 #preview
 title: Natixis
-image: /images/NATIXIS.jpeg
+image: /images/4.png
 category: Trading Partners
 category_slug: trading-partners
 type: UI/UX Design, Mobile Apps, Interactive Design
 team: Alexander Bravo
 date: 2021-2023
-
+link: https://www.im.natixis.com/us/home
 #full details
 details:
     items:
