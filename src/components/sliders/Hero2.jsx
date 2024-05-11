@@ -17,6 +17,9 @@ const Hero2Slider = () => {
                         <div className="onovo-hero-slide-item">
                            
                             <div className="image slider-hero-2-main" >
+                            <video autoPlay loop muted style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", zIndex: "-1"}}>
+                  <source src="/images/bg.mp4" type="video/mp4" />
+                </video>
                                 <div className="ovrl" style={{"opacity": "0.95"}} />
                             </div>
                           

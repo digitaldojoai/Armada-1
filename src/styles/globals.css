@@ -15,7 +15,7 @@ img.mfp-img {
 
 
 .bg-for-hero-home{
-    background-image: url('/images/Landing.png');
+    /* background-image: url('/images/bg.mp4'); */
     background-size: cover;
     background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ img.mfp-img {
         flex-direction: column;
     }
     .bg-for-hero-home{
-        background-image: url('/images/landingMobile.png') !important;
+        /* background-image: url('/images/landingMobile.png') !important; */
         background-size: cover;
         background-position: center;
       background-repeat: no-repeat;
