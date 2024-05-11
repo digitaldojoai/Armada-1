@@ -3,31 +3,80 @@ import Layouts from "@layouts/Layouts";
 import Accordion from "react-bootstrap/Accordion";
 import appData from "@data/app.json";
 import { Formik } from "formik";
+import { useState } from "react";
+import emailjs from 'emailjs-com';
 import { toast } from "react-toastify";
 const Contact = () => {
-  const faqData = {
-    title: "Client’s FAQ",
-    subtitle: "Solving Business Problems <br>is An Everyday",
-    items: [
-      {
-        title: "Secure Management and Workforce?",
-        text: "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi.",
-      },
-      {
-        title: "Logistics Workforce on Track?",
-        text: "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi.",
-      },
-      {
-        title: "Online Courses & Certification?",
-        text: "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi.",
-      },
-      {
-        title: "Figures and data representative of an organization's?",
-        text: "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi.",
-      },
-    ],
-  };
 
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [tel, setTel] = useState('')
+  const [message, setMessage] = useState('')
+
+//function to validate all fields
+const validateFields = (name, email, tel, message) => {
+  const errors = {};
+
+  // Name validation: should not be empty and should contain only letters
+  if (!name.trim()) {
+    errors.name = 'Name is required';
+    toast.error('Name is required!')
+  } else if (!/^[A-Za-z]+$/.test(name)) {
+    errors.name = 'Name should contain only letters';
+    toast.error('Name should contain only letters')
+  }
+
+  // Email validation: should not be empty and should be a valid email
+  if (!email.trim()) {
+    errors.email = 'Email is required';
+    toast.error('email is required')
+  } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    errors.email = 'Invalid email address';
+    toast.error('Invalid email address')
+
+  }
+
+  // Phone number validation: should not be empty and should be a valid phone number
+  if (!tel.trim()) {
+    errors.tel = 'Phone number is required';
+    toast.error('Phone number is required')
+  } else if (!/^[0-9]{8,15}$/.test(tel)) {
+    errors.tel = 'Invalid phone number';
+    toast.error('Invalid phone number')
+  }
+
+  // Message validation: should not be empty
+  if (!message.trim()) {
+    errors.message = 'Message is required';
+    toast.error('message is required');
+  }
+
+  return errors;
+};
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const serviceID = 'service_4xy8t69';
+   const templateID = 'template_un3tt7c';
+   const errors = validateFields(name, email, tel, message);
+   if (Object.keys(errors).length == 0) {
+    toast.success('Message was sent!')
+   emailjs
+      .send(serviceID, templateID, {
+        from_name:name,
+        email:email,
+        number:tel,
+        message:message
+      },'jN8O-Ao0oKuRdzXWX'
+    )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );}
+  }
   return (
     <Layouts>
       <PageBanner
@@ -50,91 +99,6 @@ const Contact = () => {
 
               {/* Form */}
               <div className="onovo-form">
-              <Formik
-							  validateOnBlur={false}
-							  validateOnChange={false}
-                            initialValues = {{ email: '', name: '', tel: '', message: '' }}
-                            validate = { values => {
-								const errors = {};
-								const noWhitespaceRegex = /^\s+$/;
-								const onlyLettersRegex = /^[A-Za-z]+$/;
-								const phoneNumberRegex = /^[0-9]{8,15}$/;
-							
-								if (!values.email) {
-									toast.error('Required');
-								} else if (
-									!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-								) {
-									toast.error('Invalid email address');
-								} else if (noWhitespaceRegex.test(values.email)) {
-									toast.error( 'Whitespace is not allowed')
-								}
-							
-								if (!values.name) {
-									toast.error('Name Required');
-								} else if (!onlyLettersRegex.test(values.name)) {
-									toast.error('Name should contain only letters')
-								}
-							
-								if (!values.tel) {
-									toast.error('Required')
-								} else if (!phoneNumberRegex.test(values.tel)) {
-									toast.error( 'Invalid phone number')
-								}
-							
-								if (noWhitespaceRegex.test(values.message)) {
-									toast.error('Whitespace is not allowed')
-								}
-								return errors;
-							}}
-                            onSubmit = {( values, { setSubmitting } ) => {
-							if (isValid ===true) {
-                                const form = document.getElementById("contactForm");
-                                const status = document.getElementById("contactFormStatus");
-                                const data = new FormData();
-
-                                data.append('name', values.name);
-                                data.append('tel', values.tel);
-                                data.append('email', values.email);
-                                data.append('message', values.message);
-
-                                fetch(form.action, {
-                                    method: 'POST',
-                                    body: data,
-                                    headers: {
-                                        'Accept': 'application/json'
-                                    }
-                                }).then(response => {
-                                    if (response.ok) {
-                                        form.reset()
-                                    } else {
-                                        response.json().then(data => {
-                                            if (Object.hasOwn(data, 'errors')) {
-                                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                                            } else {
-                                                toast.error('There was an error processing the request')
-                                            }
-                                        })
-                                    }
-                                }).catch(error => {
-									toast.error('There was an error processing the request')
-                                });
-
-                                setSubmitting(false);
-                            }}
-							
-						}
-                            >
-                  {({
-                    values,
-                    errors,
-                    touched,
-                    handleChange,
-                    handleBlur,
-                    handleSubmit,
-                    isSubmitting,
-                    /* and other goodies */
-                  }) => (
                     <form
                       onSubmit={handleSubmit}
                       id="contactForm"
@@ -150,9 +114,9 @@ const Contact = () => {
                               type="text"
                               name="name"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.name}
+                              onChange={(e)=>setName(e.target.value)}
+                               
+                              value={name}
                             />
                           </p>
                         </div>
@@ -163,9 +127,9 @@ const Contact = () => {
                               type="email"
                               name="email"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.email}
+                              onChange={(e)=>setEmail(e.target.value)}
+                               
+                              value={email}
                             />
                           </p>
                         </div>
@@ -176,9 +140,9 @@ const Contact = () => {
                               type="tel"
                               name="tel"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.tel}
+                              onChange={(e)=>setTel(e.target.value)}
+                               
+                              value={tel}
                             />
                           </p>
                         </div>
@@ -188,9 +152,9 @@ const Contact = () => {
                               placeholder="Message"
                               name="message"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.message}
+                              onChange={(e)=>setMessage(e.target.value)}
+                               
+                              value={message}
                             />
                           </p>
                         </div>
@@ -211,8 +175,6 @@ const Contact = () => {
                         id="contactFormStatus"
                       />
                     </form>
-                  )}
-                </Formik>
               </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">

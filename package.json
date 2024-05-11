@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "date-fns": "^2.30.0",
+    "emailjs-com": "^3.2.0",
     "formik": "^2.4.2",
     "gray-matter": "^4.0.3",
     "isotope-layout": "^3.0.6",
