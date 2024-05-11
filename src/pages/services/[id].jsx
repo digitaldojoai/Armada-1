@@ -6,6 +6,8 @@ import appData from "@data/app.json";
 import { Formik } from 'formik';
 
 import { getAllServicesIds, getServiceData, getSortedServicesData } from "@library/services";
+import { toast } from "react-toastify";
+import { isValid } from "date-fns";
 
 const ServiceDetail = ( { postData, services } ) => {
   let prev_id, next_id, prev_key, next_key = 0;
@@ -111,19 +113,44 @@ const ServiceDetail = ( { postData, services } ) => {
 							<h5>Send Us A Message</h5>
 							<p>Feel some love, to see what we can do...t!</p>
 							<Formik
+							  validateOnBlur={false}
+							  validateOnChange={false}
                             initialValues = {{ email: '', name: '', tel: '', message: '' }}
                             validate = { values => {
-                                const errors = {};
-                                if (!values.email) {
-                                    errors.email = 'Required';
-                                } else if (
-                                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                                ) {
-                                    errors.email = 'Invalid email address';
-                                }
-                                return errors;
-                            }}
+								const errors = {};
+								const noWhitespaceRegex = /^\s+$/;
+								const onlyLettersRegex = /^[A-Za-z]+$/;
+								const phoneNumberRegex = /^[0-9]{8,15}$/;
+							
+								if (!values.email) {
+									toast.error('Required');
+								} else if (
+									!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+								) {
+									toast.error('Invalid email address');
+								} else if (noWhitespaceRegex.test(values.email)) {
+									toast.error( 'Whitespace is not allowed')
+								}
+							
+								if (!values.name) {
+									toast.error('Name Required');
+								} else if (!onlyLettersRegex.test(values.name)) {
+									toast.error('Name should contain only letters')
+								}
+							
+								if (!values.tel) {
+									toast.error('Required')
+								} else if (!phoneNumberRegex.test(values.tel)) {
+									toast.error( 'Invalid phone number')
+								}
+							
+								if (noWhitespaceRegex.test(values.message)) {
+									toast.error('Whitespace is not allowed')
+								}
+								return errors;
+							}}
                             onSubmit = {( values, { setSubmitting } ) => {
+							if (isValid ===true) {
                                 const form = document.getElementById("contactForm");
                                 const status = document.getElementById("contactFormStatus");
                                 const data = new FormData();
@@ -141,23 +168,24 @@ const ServiceDetail = ( { postData, services } ) => {
                                     }
                                 }).then(response => {
                                     if (response.ok) {
-                                        status.innerHTML = "Thanks for your submission!";
                                         form.reset()
                                     } else {
                                         response.json().then(data => {
                                             if (Object.hasOwn(data, 'errors')) {
                                                 status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
                                             } else {
-                                                status.innerHTML = "Oops! There was a problem submitting your form"
+                                                toast.error('There was an error processing the request')
                                             }
                                         })
                                     }
                                 }).catch(error => {
-                                    status.innerHTML = "Oops! There was a problem submitting your form"
+									toast.error('There was an error processing the request')
                                 });
 
                                 setSubmitting(false);
                             }}
+							
+						}
                             >
                             {({
                                 values,
