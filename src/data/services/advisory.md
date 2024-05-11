@@ -12,16 +12,19 @@ accordion:
   items:
     - heading: Holistic Portfolio management 
       content: 
-        Armada, a pioneering force in the realm of holistic portfolio management, redefines the landscape of strategic financial planning. With an unwavering commitment to delivering comprehensive solutions
+        Armada revolutionizes strategic financial planning by seamlessly integrating financial, risk, and investment management, optimizing portfolios for a harmonious risk-return balance. Its holistic approach considers client goals, market dynamics, and emerging trends, empowering clients with personalized strategies and continuous monitoring for sustained success.
         
       bullets: 
         - Redefines financial plannin g with holistic portfolio management
         - Optimizes portfolios with quantitative analysis and foresight, ensuring a balanced risk-return ratio.
+        - In real estate, it guides clients through property investment, development, and management for lucrative ventures.
+
+    - heading: Private Placements
+      content: Armada excels in private placement consulting, specializing in private equity, sports venture capital, and real estate, providing tailored guidance for strategic investments and capital placement.
+      bullets: 
+        - In private equity, Armada offers advice on fundraising, deal structuring, and investor relations.
+        - In sports venture capital, it leverages industry insights to identify investment opportunities.
         - Tailors strategies that empower clients to navigate complexities confidently
-
-    - heading: Strategic Planning
-      content: Armada emerges as a distinguished player in the realm of private placement consulting, specializing in the dynamic arenas of private equity, sports venture capital, and real estate. With an astute understanding of the intricacies inherent in these sectors, Armada provides unparalleled guidance to clients seeking strategic investments and capital placement. The company's expertise in private equity ensures that businesses receive tailored advice on fundraising, deal structuring, and investor relations, fostering growth and maximizing value. In the realm of sports venture capital, Armada brings a unique perspective, leveraging its insights into the ever-evolving sports industry to identify and capitalize on investment opportunities. Additionally, in the realm of real estate, Armada navigates the complexities of property investment, development, and management, guiding clients toward lucrative ventures. Armada's commitment to excellence and client-centric approach positions it as a trusted partner for those looking to navigate the intricate landscape of private placement in these high-stakes industries, ensuring strategic success and sustainable growth.
-
    
 
 additional:
