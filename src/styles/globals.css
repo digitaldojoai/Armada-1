@@ -22,9 +22,10 @@ img.mfp-img {
   background-size: cover;
 }
 
+
 @media screen and (min-width: 768px) {
     .basic-info-about{
-        gap: 100px;
+        justify-content: space-between;
     }
     
     
@@ -57,4 +58,10 @@ img.mfp-img {
     .formik-form-main{
         margin-top: 50px;
     }
+}
+
+/* added gap tp list of advisors in about us page */
+.class-for-ist-advisor{
+    margin-top: 20px;
+    width: 300px !important;
 }

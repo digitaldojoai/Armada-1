@@ -38,13 +38,13 @@ const AboutSection = () => {
                 </div>
 
                 {/* Description */}
-                <div className="d-flex basic-info-about">
+                <div className="d-flex basic-info-about ">
                   
                   <div  className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <p dangerouslySetInnerHTML={{__html: Data.items[0].text}} />
                 
                   </div>
-                  <div  className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <div  className="col-xs-12 col-sm-12 col-md-6 col-lg-6 class-for-ist-advisor">
                    <h4>Pat Mulvey</h4>
                   <h4> Joe Pastore </h4>
                    <h4>Eric Colon</h4>

@@ -5,13 +5,13 @@ const TeamSection = ( { team } ) => {
     return (
         <>
             {/* Onovo Team */}
-			<section className="onovo-section gap-top-140 gap-bottom-140">
+			<section className="onovo-section  gap-bottom-140 " id="teams">
 				<div className="container">
 
 					{/* Heading */}
 					<div className="onovo-heading align-center gap-bottom-40">
 						<div className="onovo-subtitle-1">
-							<span>{Data.subtitle}</span>
+							<span className="fs-5">{Data.subtitle}</span>
 						</div>
 						<h2 className="onovo-title-2">
 							<span dangerouslySetInnerHTML={{__html: Data.title}} />
@@ -24,6 +24,7 @@ const TeamSection = ( { team } ) => {
                         {team.slice(0, Data.numOfItems).map((item, key) => (
 						<div key={`team-item-${key}`} className=" d-flex align-items-center gap-5 col-xs-12 col-sm-12 col-md-6 col-lg-3">
 							<div className="onovo-team w-100" data-onovo-overlay data-onovo-scroll>
+							<Link href={`/team/${item.id}`} >
 								<div className="onovo-team-item onovo-hover-3">
 									<div className="desc">
 										<h5 className="title">
@@ -35,15 +36,6 @@ const TeamSection = ( { team } ) => {
 											<span data-splitting data-onovo-scroll>{item.role}</span>
 										</div>
 										<div className="onovo-social-1">
-											{/* <ul>
-                                                {item.social.map((link, link_key) => (
-												<li key={`team-item-${key}-social-link-${link_key}`}>
-													<a className="onovo-social-link onovo-hover-2" href={link.link} title={link.title} target="_blank">
-														<i aria-hidden="true" className={link.icon} />
-													</a>
-												</li>
-												))}
-											</ul> */}
 										</div>
 									</div>
 									<div className="image ">
@@ -55,6 +47,7 @@ const TeamSection = ( { team } ) => {
 										<span>{item.first_letter}</span>
 									</div>
 								</div>
+								</Link>
 							</div>
 						</div>
                         ))}
