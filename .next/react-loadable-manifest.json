@@ -5,18 +5,6 @@
       "static/chunks/src_components_SplitScrollAnimation_jsx.js"
     ]
   },
-  "about.jsx -> @components/sliders/History": {
-    "id": "about.jsx -> @components/sliders/History",
-    "files": [
-      "static/chunks/src_components_sliders_History_jsx.js"
-    ]
-  },
-  "about.jsx -> @components/sliders/Testimonial2": {
-    "id": "about.jsx -> @components/sliders/Testimonial2",
-    "files": [
-      "static/chunks/src_components_sliders_Testimonial2_jsx.js"
-    ]
-  },
   "index.jsx -> @components/sections/Projects": {
     "id": "index.jsx -> @components/sections/Projects",
     "files": [

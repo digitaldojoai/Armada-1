@@ -42,7 +42,7 @@ const validateFields = (name, email, tel, message) => {
   if (!tel.trim()) {
     errors.tel = 'Phone number is required';
     toast.error('Phone number is required')
-  } else if  (!/^[+\-()0-9]{8,15}$/.test(tel)) {
+  } else if  (!/^[+\-()0-9\s]{8,15}$/.test(tel)) {
     errors.tel = 'Invalid phone number';
     toast.error('Invalid phone number')
   }
