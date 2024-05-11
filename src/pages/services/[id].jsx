@@ -3,7 +3,9 @@ import PageBanner from "@components/PageBanner";
 import { Accordion, Card } from "react-bootstrap";
 import Link from "next/link";
 import appData from "@data/app.json";
-import { Formik } from "formik";
+import { useState } from "react";
+import emailjs from 'emailjs-com';
+
 
 import {
   getAllServicesIds,
@@ -34,7 +36,81 @@ const ServiceDetail = ({ postData, services }) => {
       next_id = item.id;
     }
   });
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [tel, setTel] = useState('')
+  const [message, setMessage] = useState('')
 
+//function to validate all fields
+const validateFields = (name, email, tel, message) => {
+  const errors = {};
+
+  // Name validation: should not be empty and should contain only letters
+  if (!name.trim()) {
+    errors.name = 'Name is required';
+    toast.error('Name is required!')
+    
+  } else if (!/^[A-Za-z\s]+$/.test(name)) {
+    errors.name = 'Name should contain only letters';
+    toast.error('Name should contain only letters')
+  }
+
+  // Email validation: should not be empty and should be a valid email
+  if (!email.trim()) {
+    errors.email = 'Email is required';
+    toast.error('email is required')
+  } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    errors.email = 'Invalid email address';
+    toast.error('Invalid email address')
+
+  }
+
+  // Phone number validation: should not be empty and should be a valid phone number
+  if (!tel.trim()) {
+    errors.tel = 'Phone number is required';
+    toast.error('Phone number is required')
+  } else if  (!/^[+\-()0-9]{8,15}$/.test(tel)) {
+    errors.tel = 'Invalid phone number';
+    toast.error('Invalid phone number')
+  }
+
+  // Message validation: should not be empty
+  if (!message.trim()) {
+    errors.message = 'Message is required';
+    toast.error('message is required');
+  }
+
+  return errors;
+};
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const serviceID = 'service_4xy8t69';
+   const templateID = 'template_un3tt7c';
+   const errors = validateFields(name, email, tel, message);
+   if (Object.keys(errors).length == 0) {
+   emailjs
+      .send(serviceID, templateID, {
+        from_name:name,
+        email:email,
+        number:tel,
+        message:message
+      },'jN8O-Ao0oKuRdzXWX'
+    )
+      .then(
+        () => {
+          setName('')
+		  setEmail('')
+		  setTel('')
+		  setMessage('')
+		  toast.success('Message was sent!')
+
+		  
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );}
+  }
   return (
     <Layouts>
       <PageBanner
@@ -123,102 +199,7 @@ const ServiceDetail = ({ postData, services }) => {
               <div className="onovo-form-box formik-form-main onovo-text-white">
                 <h5>Send Us A Message</h5>
                 <p>Feel some love, to see what we can do...t!</p>
-                <Formik
-                  validateOnBlur={false}
-                  validateOnChange={false}
-                  initialValues={{ email: "", name: "", tel: "", message: "" }}
-                  validate={(values) => {
-                    const errors = {};
-                    const noWhitespaceRegex = /^\s+$/;
-                    const onlyLettersRegex = /^[A-Za-z]+$/;
-                    const phoneNumberRegex = /^[0-9]{8,15}$/;
-                    if (!values.email) {
-                      toast.error("Required");
-                    } else if (
-                      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                        values.email
-                      )
-                    ) {
-                      toast.error("Invalid email address");
-                    } else if (noWhitespaceRegex.test(values.email)) {
-                      toast.error("Whitespace is not allowed");
-                    }
-
-                    if (!values.name) {
-                      toast.error("Name Required");
-                    } else if (!onlyLettersRegex.test(values.name)) {
-                      toast.error("Name should contain only letters");
-                    }
-
-                    if (!values.tel) {
-                      toast.error("Required");
-                    } else if (!phoneNumberRegex.test(values.tel)) {
-                      toast.error("Invalid phone number");
-                    }
-
-                    if (noWhitespaceRegex.test(values.message)) {
-                      toast.error("Whitespace is not allowed");
-                    }
-                    console.log("errors ", errors);
-                    return errors;
-                  }}
-                  onSubmit={(values, { setSubmitting }) => {
-					alert('isvalidating value', isValid(values))
-                      toast.success("sent");
-                      const form = document.getElementById("contactForm");
-                      const status =
-                        document.getElementById("contactFormStatus");
-                      const data = new FormData();
-
-                      data.append("name", values.name);
-                      data.append("tel", values.tel);
-                      data.append("email", values.email);
-                      data.append("message", values.message);
-
-                      fetch(form.action, {
-                        method: "POST",
-                        body: data,
-                        headers: {
-                          Accept: "application/json",
-                        },
-                      })
-                        .then((response) => {
-                          if (response.ok) {
-                            form.reset();
-                          } else {
-                            response.json().then((data) => {
-                              if (Object.hasOwn(data, "errors")) {
-                                status.innerHTML = data["errors"]
-                                  .map((error) => error["message"])
-                                  .join(", ");
-                              } else {
-                                toast.error(
-                                  "There was an error processing the request"
-                                );
-                              }
-                            });
-                          }
-                        })
-                        .catch((error) => {
-							console.log(error)
-                          	toast.error(
-                            "There was an error processing the request"
-                          );
-                        });
-
-                      setSubmitting(false);
-                  }}
-                >
-                  {({
-                    values,
-                    errors,
-                    touched,
-                    handleChange,
-                    handleBlur,
-                    handleSubmit,
-                    isSubmitting,
-                    /* and other goodies */
-                  }) => (
+              
                     <form
                       onSubmit={handleSubmit}
                       id="contactForm"
@@ -235,9 +216,8 @@ const ServiceDetail = ({ postData, services }) => {
                               type="text"
                               name="name"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.name}
+                              onChange={(e)=>setName(e.target.value)}
+                              value={name}
                             />
                           </p>
                         </div>
@@ -249,9 +229,8 @@ const ServiceDetail = ({ postData, services }) => {
                               type="email"
                               name="email"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.email}
+                              onChange={(e)=>setEmail(e.target.value)}
+                              value={email}
                             />
                           </p>
                         </div>
@@ -263,9 +242,8 @@ const ServiceDetail = ({ postData, services }) => {
                               type="tel"
                               name="tel"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.tel}
+                              onChange={(e)=>setTel(e.target.value)}
+                              value={tel}
                             />
                           </p>
                         </div>
@@ -277,9 +255,8 @@ const ServiceDetail = ({ postData, services }) => {
                               placeholder="Message"
                               name="message"
                               required="required"
-                              onChange={handleChange}
-                              onBlur={handleBlur}
-                              value={values.message}
+                              onChange={(e)=>setMessage(e.target.value)}
+                              value={message}
                             />
                           </p>
                         </div>
@@ -300,8 +277,7 @@ const ServiceDetail = ({ postData, services }) => {
                         id="contactFormStatus"
                       />
                     </form>
-                  )}
-                </Formik>
+               
               </div>
             </div>
           </div>

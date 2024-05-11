@@ -6,6 +6,7 @@ import { Formik } from "formik";
 import { useState } from "react";
 import emailjs from 'emailjs-com';
 import { toast } from "react-toastify";
+
 const Contact = () => {
 
   const [name, setName] = useState('')
@@ -21,7 +22,8 @@ const validateFields = (name, email, tel, message) => {
   if (!name.trim()) {
     errors.name = 'Name is required';
     toast.error('Name is required!')
-  } else if (!/^[A-Za-z]+$/.test(name)) {
+    
+  } else if (!/^[A-Za-z\s]+$/.test(name)) {
     errors.name = 'Name should contain only letters';
     toast.error('Name should contain only letters')
   }
@@ -40,7 +42,7 @@ const validateFields = (name, email, tel, message) => {
   if (!tel.trim()) {
     errors.tel = 'Phone number is required';
     toast.error('Phone number is required')
-  } else if (!/^[0-9]{8,15}$/.test(tel)) {
+  } else if  (!/^[+\-()0-9]{8,15}$/.test(tel)) {
     errors.tel = 'Invalid phone number';
     toast.error('Invalid phone number')
   }
@@ -59,7 +61,6 @@ const validateFields = (name, email, tel, message) => {
    const templateID = 'template_un3tt7c';
    const errors = validateFields(name, email, tel, message);
    if (Object.keys(errors).length == 0) {
-    toast.success('Message was sent!')
    emailjs
       .send(serviceID, templateID, {
         from_name:name,
@@ -70,7 +71,11 @@ const validateFields = (name, email, tel, message) => {
     )
       .then(
         () => {
-          console.log('SUCCESS!');
+          setName('')
+          setEmail('')
+          setTel('')
+          setMessage('')
+          toast.success('Message was sent!')
         },
         (error) => {
           console.log('FAILED...', error.text);
