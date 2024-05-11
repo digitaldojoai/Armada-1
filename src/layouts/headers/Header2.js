@@ -144,7 +144,7 @@ const Header2 = ({ darkHeader, cartButton }) => {
 						<div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center align-right hide-on-mobile-extra">
 
 							{/* Button */}
-							<Link className="onovo-btn onovo-hover-btn btn--active" href='https://cdcdyn.interactivebrokers.com/sso/Login?RL=1&locale=en_US&REFID=www.interactivebrokers.com'>
+							<Link className="onovo-btn login-btn-main-style btn--border btn--white btn--color onovo-hover-btn " href='https://cdcdyn.interactivebrokers.com/sso/Login?RL=1&locale=en_US&REFID=www.interactivebrokers.com'>
 								<span>Log In</span>
 							</Link>
 

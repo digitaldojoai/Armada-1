@@ -1365,6 +1365,41 @@ a.onovo-btn-circle,
 	-webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
 }
 
+a.onovo-btn-login,
+.onovo-btn-login,
+button[type="submit"],
+input[type="submit"],
+a.onovo-btn-circle,
+.onovo-btn-circle {
+	padding: 0 30px;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 700;
+	height: 66px;
+	line-height: 66px;
+	text-decoration: none;
+	outline: none!important;
+	cursor: pointer;
+	border: none;
+	box-shadow: none!important;
+	text-align: center;
+	background: transparent;
+	border-radius: 66px;
+	-webkit-border-radius: 66px;
+	transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+	-webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+}
+
+.login-btn-main-style{
+	height:46px !important;
+	line-height: 46px !important;
+	border-radius: 26px !important;
+	-webkit-border-radius: 26px !important;
+}
 button[type="submit"],
 input[type="submit"] {
 	background: #000;

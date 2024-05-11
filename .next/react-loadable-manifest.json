@@ -4,5 +4,35 @@
     "files": [
       "static/chunks/src_components_SplitScrollAnimation_jsx.js"
     ]
+  },
+  "index.jsx -> @components/sections/Projects": {
+    "id": "index.jsx -> @components/sections/Projects",
+    "files": [
+      "static/chunks/src_components_sections_Projects_jsx.js"
+    ]
+  },
+  "index.jsx -> @components/sliders/Hero2": {
+    "id": "index.jsx -> @components/sliders/Hero2",
+    "files": [
+      "static/chunks/src_components_sliders_Hero2_jsx.js"
+    ]
+  },
+  "index.jsx -> @components/sliders/History": {
+    "id": "index.jsx -> @components/sliders/History",
+    "files": [
+      "static/chunks/src_components_sliders_History_jsx.js"
+    ]
+  },
+  "index.jsx -> @components/sliders/LatestPosts": {
+    "id": "index.jsx -> @components/sliders/LatestPosts",
+    "files": [
+      "static/chunks/src_components_sliders_LatestPosts_jsx.js"
+    ]
+  },
+  "index.jsx -> @components/sliders/Testimonial2": {
+    "id": "index.jsx -> @components/sliders/Testimonial2",
+    "files": [
+      "static/chunks/src_components_sliders_Testimonial2_jsx.js"
+    ]
   }
 }
