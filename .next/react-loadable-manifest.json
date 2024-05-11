@@ -34,11 +34,5 @@
     "files": [
       "static/chunks/src_components_sliders_Testimonial2_jsx.js"
     ]
-  },
-  "projects-2.jsx -> @components/ProjectsGrid": {
-    "id": "projects-2.jsx -> @components/ProjectsGrid",
-    "files": [
-      "static/chunks/src_components_ProjectsGrid_jsx.js"
-    ]
   }
 }
