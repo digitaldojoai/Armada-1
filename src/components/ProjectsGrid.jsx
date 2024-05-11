@@ -103,7 +103,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                                 </li>
                                 {appData.settings.portfolio.categories.map((item, key) => (
                                 <li key={`categories-item-${key}`}>
-                                    <button onClick={handleFilterKeyChange(item.slug)} className="" type="button" data-filter={item.slug}>
+                                    <button onClick={handleFilterKeyChange(item.slug)} className="onovo-filter-item" type="button" data-filter={item.slug}>
                                         <span>{item.label}</span>
                                     </button>
                                 </li>

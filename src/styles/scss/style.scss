@@ -4576,6 +4576,19 @@ ul.onovo-footer-menu li {
 		height: 45px !important;
 		border-radius: 45px !important;
 		line-height: 45px !important;
+		padding: 0 20px !important;
+	}
+
+	.onovo-filter.filter--default ul li::before {
+		margin-top: -13px;
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 1px;
+		height: 26px;
+		background: #D0D0D0;
+		z-index: -1;
 	}
 	// 	display: flex;
 	// 	flex-direction: column;
@@ -4663,6 +4676,7 @@ ul.onovo-footer-menu li {
 	top: 50%;
 	width: 1px;
 	height: 26px;
+	margin-left: 3px;
 	background: #D0D0D0;
 	z-index: -1;
 }
@@ -5092,9 +5106,7 @@ ul.onovo-footer-menu li {
 	.onovo-portfolio .onovo-loadmore {
 		margin: 15px 0 0 0;
 	}
-	.onovo-filter.filter--default ul li::before {
-		display: none;
-	}
+	
 }
 
 

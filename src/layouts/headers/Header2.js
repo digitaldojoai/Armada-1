@@ -68,10 +68,10 @@ const Header2 = ({ darkHeader, cartButton }) => {
   return (
     <>
       {/* Header */}
-      <header className="onovo-header mt-3 header--white">
+      <header className="onovo-header header--white">
 			<div className="header--builder">
 				<div className="container">
-					<div className="row">
+					<div className="row mt-3">
 						<div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center">
 
 							{/* Logo */}
