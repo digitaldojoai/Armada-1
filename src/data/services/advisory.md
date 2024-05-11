@@ -20,7 +20,7 @@ accordion:
         - Tailors strategies that empower clients to navigate complexities confidently
 
     - heading: Strategic Planning
-      content: Armada emerges as a distinguished player in the realm of private placement consulting, specializing in the dynamic arenas of private equity, sports venture capital, and real estate. With an astute understanding of the intricacies inherent in these sectors, Armada provides unparalleled guidance to clients seeking strategic investments and capital placement.
+      content: Armada emerges as a distinguished player in the realm of private placement consulting, specializing in the dynamic arenas of private equity,
 
    
 
