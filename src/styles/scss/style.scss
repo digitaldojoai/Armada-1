@@ -4560,12 +4560,23 @@ ul.onovo-footer-menu li {
 	}
 }
 
+.filter-container-main{
+	padding-top: 2px !important;
+	align-items: center !important;
+}
+
 @media (max-width: 767px) {
 	.onovo-ticker-slider .title,
 	.onovo-ticker-slider .title a {
 		font-size: 50px;
 	}
-	// .filter-container-main{
+	
+	.onovo-filter-item{
+		// border: 2px solid blue !important;
+		height: 45px !important;
+		border-radius: 45px !important;
+		line-height: 45px !important;
+	}
 	// 	display: flex;
 	// 	flex-direction: column;
 	

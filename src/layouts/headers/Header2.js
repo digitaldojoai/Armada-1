@@ -68,7 +68,7 @@ const Header2 = ({ darkHeader, cartButton }) => {
   return (
     <>
       {/* Header */}
-      <header className="onovo-header header--white">
+      <header className="onovo-header mt-3 header--white">
 			<div className="header--builder">
 				<div className="container">
 					<div className="row">
