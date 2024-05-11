@@ -36,7 +36,7 @@ const FAQ = () => {
 				<div className="container">
 
           {/* Faq items */}
-          <Accordion>
+          <Accordion defaultActiveKey="0">
           <div className="onovo-faq-items">
             {Content.items.map((item, key) => (
             <Accordion.Item key={`faq-item-${key}`} eventKey={`faq-acc-${key}`}>
