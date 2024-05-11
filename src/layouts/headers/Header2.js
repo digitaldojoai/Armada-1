@@ -124,7 +124,7 @@ const Header2 = ({ darkHeader, cartButton }) => {
 													<i className="icon fas fa-chevron-down" />:null
 													}
 													{item.children?
-													<ul className="sub-menu">
+													<ul className="sub-menu  ">
 													{item.children.map((subitem, key) => (
 													<li  key={`header-nav-sub-item-${key}`} className={`${item.classes} mt-2`}>
 														<Link className="onovo-lnk lnk--active" href={subitem.link} target={"_blank"} >{subitem.label}</Link>
