@@ -15,9 +15,9 @@ accordion:
         Armada revolutionizes strategic financial planning by seamlessly integrating financial, risk, and investment management, optimizing portfolios for a harmonious risk-return balance. Its holistic approach considers client goals, market dynamics, and emerging trends, empowering clients with personalized strategies and continuous monitoring for sustained success.
         
       bullets: 
-        - Redefines financial plannin g with holistic portfolio management
-        - Optimizes portfolios with quantitative analysis and foresight, ensuring a balanced risk-return ratio.
-        - In real estate, it guides clients through property investment, development, and management for lucrative ventures.
+        - Armada offers comprehensive solutions by integrating financial, risk, and investment management.
+        - Its seasoned experts utilize quantitative analysis and strategic foresight to optimize portfolios.
+        - The company's holistic approach goes beyond traditional metrics, considering individual client goals and market dynamics for sustained success.
 
     - heading: Private Placements
       content: Armada excels in private placement consulting, specializing in private equity, sports venture capital, and real estate, providing tailored guidance for strategic investments and capital placement.

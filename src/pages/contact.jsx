@@ -6,6 +6,7 @@ import { Formik } from "formik";
 import { useState } from "react";
 import emailjs from 'emailjs-com';
 import { toast } from "react-toastify";
+import Preloader from "../layouts/Preloader";
 
 const Contact = () => {
 
@@ -13,6 +14,7 @@ const Contact = () => {
   const [email, setEmail] = useState('')
   const [tel, setTel] = useState('')
   const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
 
 //function to validate all fields
 const validateFields = (name, email, tel, message) => {
@@ -21,19 +23,23 @@ const validateFields = (name, email, tel, message) => {
   // Name validation: should not be empty and should contain only letters
   if (!name.trim()) {
     errors.name = 'Name is required';
+    setLoading(false)
     toast.error('Name is required!')
     
-  } else if (!/^[A-Za-z\s]+$/.test(name)) {
+  } else if (!/^(?!\d+$)(?!.$).+$/.test(name)) {
     errors.name = 'Name should contain only letters';
+    setLoading(false)
     toast.error('Name should contain only letters')
   }
 
   // Email validation: should not be empty and should be a valid email
   if (!email.trim()) {
     errors.email = 'Email is required';
+    setLoading(false)
     toast.error('email is required')
   } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
     errors.email = 'Invalid email address';
+    setLoading(false)
     toast.error('Invalid email address')
 
   }
@@ -41,22 +47,30 @@ const validateFields = (name, email, tel, message) => {
   // Phone number validation: should not be empty and should be a valid phone number
   if (!tel.trim()) {
     errors.tel = 'Phone number is required';
+    setLoading(false)
     toast.error('Phone number is required')
-  } else if  (!/^[+\-()0-9\s]{8,15}$/.test(tel)) {
+  } else if  (!/^(?=.*\d)[+\-()0-9\s]{8,15}$/.test(tel)) {
     errors.tel = 'Invalid phone number';
+    setLoading(false)
     toast.error('Invalid phone number')
   }
 
   // Message validation: should not be empty
   if (!message.trim()) {
     errors.message = 'Message is required';
-    toast.error('message is required');
+    setLoading(false)
+  toast.error('Message is required');
+} else if (!/^(?!\d+$)(?!.$).+$/.test(message)) {
+  errors.message = 'Invalid message';
+  setLoading(false)
+  toast.error('Invalid message');
   }
 
   return errors;
 };
   const handleSubmit = (e) => {
     e.preventDefault()
+    setLoading(true)
     const serviceID = 'service_4xy8t69';
    const templateID = 'template_un3tt7c';
    const errors = validateFields(name, email, tel, message);
@@ -75,10 +89,12 @@ const validateFields = (name, email, tel, message) => {
           setEmail('')
           setTel('')
           setMessage('')
+          setLoading(false)
           toast.success('Message was sent!')
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setLoading(false)
         },
       );}
   }
@@ -93,6 +109,7 @@ const validateFields = (name, email, tel, message) => {
 
       {/* Onovo Contact Info */}
       <section className="onovo-section gap-top-140">
+        {loading? <Preloader/>:null}
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">

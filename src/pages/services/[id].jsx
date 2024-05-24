@@ -3,9 +3,8 @@ import PageBanner from "@components/PageBanner";
 import { Accordion, Card } from "react-bootstrap";
 import Link from "next/link";
 import appData from "@data/app.json";
-import { useState } from "react";
-import emailjs from 'emailjs-com';
-
+import { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
 
 import {
   getAllServicesIds,
@@ -14,6 +13,7 @@ import {
 } from "@library/services";
 import { toast } from "react-toastify";
 import { isValid } from "date-fns";
+import Preloader from "@/src/layouts/Preloader";
 
 const ServiceDetail = ({ postData, services }) => {
   let prev_id,
@@ -36,81 +36,103 @@ const ServiceDetail = ({ postData, services }) => {
       next_id = item.id;
     }
   });
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [tel, setTel] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-//function to validate all fields
-const validateFields = (name, email, tel, message) => {
-  const errors = {};
+  useEffect(() => {
+    setName("");
+    setEmail("");
+    setTel("");
+    setMessage("");
+  }, [postData]);
+  //function to validate all fields
+  const validateFields = (name, email, tel, message) => {
+    const errors = {};
 
-  // Name validation: should not be empty and should contain only letters
-  if (!name.trim()) {
-    errors.name = 'Name is required';
-    toast.error('Name is required!')
-    
-  } else if (!/^[A-Za-z\s]+$/.test(name)) {
-    errors.name = 'Name should contain only letters';
-    toast.error('Name should contain only letters')
-  }
+    // Name validation: should not be empty and should contain only letters
+    if (!name.trim()) {
+      errors.name = "Name is required";
+      setLoading(false);
+      toast.error("Name is required!");
+    } else if (!/^(?!\d+$)(?!.$).+$/.test(name)) {
+      errors.name = "Name should contain only letters";
+      setLoading(false);
+      toast.error("Name should contain only letters");
+    }
 
-  // Email validation: should not be empty and should be a valid email
-  if (!email.trim()) {
-    errors.email = 'Email is required';
-    toast.error('email is required')
-  } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-    errors.email = 'Invalid email address';
-    toast.error('Invalid email address')
+    // Email validation: should not be empty and should be a valid email
+    if (!email.trim()) {
+      errors.email = "Email is required";
+      setLoading(false);
+      toast.error("email is required");
+    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      errors.email = "Invalid email address";
+      setLoading(false);
+      toast.error("Invalid email address");
+    }
 
-  }
+    // Phone number validation: should not be empty and should be a valid phone number
+    if (!tel.trim()) {
+      errors.tel = "Phone number is required";
+      setLoading(false);
+      toast.error("Phone number is required");
+    } else if (!/^(?=.*\d)[+\-()0-9\s]{8,15}$/.test(tel)) {
+      errors.tel = "Invalid phone number";
+      setLoading(false);
+      toast.error("Invalid phone number");
+    }
 
-  // Phone number validation: should not be empty and should be a valid phone number
-  if (!tel.trim()) {
-    errors.tel = 'Phone number is required';
-    toast.error('Phone number is required')
-  } else if  (!/^[+\-()0-9]{8,15}$/.test(tel)) {
-    errors.tel = 'Invalid phone number';
-    toast.error('Invalid phone number')
-  }
+    // Message validation: should not be empty
+    if (!message.trim()) {
+      errors.message = "Message is required";
+      setLoading(false);
+      toast.error("Message is required");
+    } else if (!/^(?!\d+$)(?!.$).+$/.test(message)) {
+      errors.message = "Invalid message";
+      setLoading(false);
+      toast.error("Invalid message");
+    }
 
-  // Message validation: should not be empty
-  if (!message.trim()) {
-    errors.message = 'Message is required';
-    toast.error('message is required');
-  }
-
-  return errors;
-};
+    return errors;
+  };
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const serviceID = 'service_4xy8t69';
-   const templateID = 'template_un3tt7c';
-   const errors = validateFields(name, email, tel, message);
-   if (Object.keys(errors).length == 0) {
-   emailjs
-      .send(serviceID, templateID, {
-        from_name:name,
-        email:email,
-        number:tel,
-        message:message
-      },'jN8O-Ao0oKuRdzXWX'
-    )
-      .then(
-        () => {
-          setName('')
-		  setEmail('')
-		  setTel('')
-		  setMessage('')
-		  toast.success('Message was sent!')
-
-		  
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );}
-  }
+    e.preventDefault();
+    setLoading(true);
+    const serviceID = "service_4xy8t69";
+    const templateID = "template_un3tt7c";
+    const errors = validateFields(name, email, tel, message);
+    if (Object.keys(errors).length == 0) {
+      emailjs
+        .send(
+          serviceID,
+          templateID,
+          {
+            from_name: name,
+            email: email,
+            number: tel,
+            message: message,
+          },
+          "jN8O-Ao0oKuRdzXWX"
+        )
+        .then(
+          () => {
+            setName("");
+            setEmail("");
+            setTel("");
+            setMessage("");
+            toast.success("Message was sent!");
+            setLoading(false);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            setLoading(false);
+          }
+        );
+    }
+  };
   return (
     <Layouts>
       <PageBanner
@@ -120,6 +142,7 @@ const validateFields = (name, email, tel, message) => {
 
       {/* Onovo Service Detail */}
       <section className="onovo-section gap-top-140">
+        {loading ? <Preloader /> : null}
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-8">
@@ -199,85 +222,84 @@ const validateFields = (name, email, tel, message) => {
               <div className="onovo-form-box formik-form-main onovo-text-white">
                 <h5>Send Us A Message</h5>
                 <p>Feel some love, to see what we can do...t!</p>
-              
-                    <form
-                      onSubmit={handleSubmit}
-                      id="contactForm"
-                      action={appData.settings.formspreeURL}
-                      className="cform"
-                      method="post"
-                    >
-                      <div className="row">
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <p>
-                            <input
-                              size="40"
-                              placeholder="Full Name"
-                              type="text"
-                              name="name"
-                              required="required"
-                              onChange={(e)=>setName(e.target.value)}
-                              value={name}
-                            />
-                          </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <p>
-                            <input
-                              size="40"
-                              placeholder="Email Address"
-                              type="email"
-                              name="email"
-                              required="required"
-                              onChange={(e)=>setEmail(e.target.value)}
-                              value={email}
-                            />
-                          </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <p>
-                            <input
-                              size="40"
-                              placeholder="Phone"
-                              type="tel"
-                              name="tel"
-                              required="required"
-                              onChange={(e)=>setTel(e.target.value)}
-                              value={tel}
-                            />
-                          </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <p>
-                            <textarea
-                              cols="40"
-                              rows="10"
-                              placeholder="Message"
-                              name="message"
-                              required="required"
-                              onChange={(e)=>setMessage(e.target.value)}
-                              value={message}
-                            />
-                          </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <p>
-                            <button
-                              type="submit"
-                              className="onovo-btn onovo-hover-btn btn--active"
-                            >
-                              <span>Send Message</span>
-                            </button>
-                          </p>
-                        </div>
-                      </div>
 
-                      <div
-                        className="form-status alert-success"
-                        id="contactFormStatus"
-                      />
-                    </form>
-               
+                <form
+                  onSubmit={handleSubmit}
+                  id="contactForm"
+                  action={appData.settings.formspreeURL}
+                  className="cform"
+                  method="post"
+                >
+                  <div className="row">
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <p>
+                        <input
+                          size="40"
+                          placeholder="Full Name"
+                          type="text"
+                          name="name"
+                          required="required"
+                          onChange={(e) => setName(e.target.value)}
+                          value={name}
+                        />
+                      </p>
+                    </div>
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <p>
+                        <input
+                          size="40"
+                          placeholder="Email Address"
+                          type="email"
+                          name="email"
+                          required="required"
+                          onChange={(e) => setEmail(e.target.value)}
+                          value={email}
+                        />
+                      </p>
+                    </div>
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <p>
+                        <input
+                          size="40"
+                          placeholder="Phone"
+                          type="tel"
+                          name="tel"
+                          required="required"
+                          onChange={(e) => setTel(e.target.value)}
+                          value={tel}
+                        />
+                      </p>
+                    </div>
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <p>
+                        <textarea
+                          cols="40"
+                          rows="10"
+                          placeholder="Message"
+                          name="message"
+                          required="required"
+                          onChange={(e) => setMessage(e.target.value)}
+                          value={message}
+                        />
+                      </p>
+                    </div>
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <p>
+                        <button
+                          type="submit"
+                          className="onovo-btn onovo-hover-btn btn--active"
+                        >
+                          <span>Send Message</span>
+                        </button>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="form-status alert-success"
+                    id="contactFormStatus"
+                  />
+                </form>
               </div>
             </div>
           </div>

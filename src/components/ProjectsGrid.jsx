@@ -150,7 +150,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                                     </div>
                                     <div className="desc">
                                       <div className="text">
-                                        <div data-splitting data-onovo-scroll>
+                                        <div  data-onovo-scroll>
                                           <span>{item.category}</span>
                                         </div>
                                       </div>

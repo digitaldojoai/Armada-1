@@ -73,7 +73,7 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
               <div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center">
 
                 {/* Logo */}
-                <div className="onovo-logo-image" style={{"maxWidth": "70px"}}>
+                <div className="onovo-logo-image" style={{"maxWidth": "80px"}}>
                   <Link href="/">
                     <img src={appData.header.logo.image} alt={appData.header.logo.alt} />
                     <img className="logo--white" src={appData.header.logo.image_white} alt={appData.header.logo.alt} />
